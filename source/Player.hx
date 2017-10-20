@@ -13,7 +13,7 @@ import flixel.system.FlxAssets.FlxGraphicAsset;
 class Player extends FlxSprite 
 {
 
-	private var speed:Float = 100;
+	private var speed:Float = 200;
 	private var interacting:Bool = false;
 	
 	public function new(?X:Float=0, ?Y:Float=0) 
@@ -24,7 +24,7 @@ class Player extends FlxSprite
 		
 		centerOrigin();
 		
-		drag.x = drag.y = 700;
+		drag.x = drag.y = 550;
 	}
 	
 	override public function update(elapsed:Float):Void 

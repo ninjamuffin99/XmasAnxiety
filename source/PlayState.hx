@@ -22,7 +22,7 @@ class PlayState extends FlxState
 	override public function create():Void
 	{
 		_map = new FlxOgmoLoader(AssetPaths.Walmart__oel);
-		_mWalls = _map.loadTilemap(AssetPaths.tiles__png, 16, 16, "walls");
+		_mWalls = _map.loadTilemap(AssetPaths.tiles__png, 32, 32, "walls");
 		_mWalls.follow();
 		_mWalls.setTileProperties(1, FlxObject.NONE);
 		_mWalls.setTileProperties(2, FlxObject.ANY);
@@ -34,21 +34,29 @@ class PlayState extends FlxState
 		_map.loadEntities(placeEntities, "entities");
 		
 		FlxG.camera.zoom = _camZoom;
+		FlxG.camera.follow(_player, LOCKON);
 		
 		super.create();
 	}
 	
 	private function placeEntities(entityName:String, entityDate:Xml):Void
 	{
+		var x:Int = Std.parseInt(entityDate.get("x"));
+		var y:Int = Std.parseInt(entityDate.get("y"));
 		
+		if (entityName == "player")
+		{
+			_player.x = x;
+			_player.y = y;
+		}
 	}
 
 	override public function update(elapsed:Float):Void
 	{
+		super.update(elapsed);
 		
 		controls();
-		
-		super.update(elapsed);
+		FlxG.collide(_player, _mWalls);
 	}
 	
 	private function controls():Void
