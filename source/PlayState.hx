@@ -38,7 +38,7 @@ class PlayState extends FlxState
 		_mWalls.setTileProperties(3, FlxObject.ANY);
 		add(_mWalls);
 		
-		_player = new Player();
+		_player = new Player(50, 50);
 		add(_player);
 		
 		_grpNPCs = new FlxTypedGroup<NPC>();
@@ -52,16 +52,17 @@ class PlayState extends FlxState
 		
 		//FlxG.camera.zoom = _camZoom;
 		FlxG.camera.follow(_player, LOCKON);
+		//FlxG.worldBounds.set(0, 0, _map.width, _map.height);
 		
 		createHUD();
 		
 		super.create();
 	}
 	
-	private function placeEntities(entityName:String, entityDate:Xml):Void
+	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
-		var x:Int = Std.parseInt(entityDate.get("x"));
-		var y:Int = Std.parseInt(entityDate.get("y"));
+		var x:Int = Std.parseInt(entityData.get("x"));
+		var y:Int = Std.parseInt(entityData.get("y"));
 		
 		if (entityName == "player")
 		{
