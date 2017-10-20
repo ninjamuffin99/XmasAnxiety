@@ -13,16 +13,26 @@ import flixel.system.FlxAssets.FlxGraphicAsset;
 class Player extends FlxSprite 
 {
 
-	private var speed:Float = 200;
+	private var speed:Float = 180;
 	private var interacting:Bool = false;
+	
+	public var anxiety:Float = 1;
 	
 	public function new(?X:Float=0, ?Y:Float=0) 
 	{
 		super(X, Y);
 		
-		makeGraphic(32, 64);
+		var lanim = [24, 25, 26, 27, 28, 29, 30, 31];
+		lanim.reverse();
 		
-		centerOrigin();
+		loadGraphic(AssetPaths.walkmc__png, true,  32, 64);
+		animation.add("d", [0, 1, 2, 3, 4, 5, 6, 7], 8, true);
+		animation.add("r", [8, 9, 10, 11, 12, 13, 14, 15], 8, true);
+		animation.add("u", [16, 17, 18, 19, 20, 21, 22, 23], 8, true);
+		animation.add("l", lanim, 8, true);
+		
+		height = 16;
+		offset.y = 48;
 		
 		drag.x = drag.y = 550;
 	}
@@ -73,6 +83,7 @@ class Player extends FlxSprite
 			{
 				facing = FlxObject.LEFT;
 				mA = 180;
+				animation.play("l");
 			}
 			else if (_right)
 			{
@@ -82,16 +93,24 @@ class Player extends FlxSprite
 			velocity.set(speed, 0);
 			velocity.rotate(FlxPoint.weak(0, 0), mA);
 			
-			
-			if ((velocity.x != 0 || velocity.y != 0) && touching == FlxObject.NONE)
+			// did have && touching -- FlxObject.NONE, but I'd rather have this
+			if ((velocity.x != 0 || velocity.y != 0))
 			{
 				switch(facing)
 				{
-					case FlxObject.LEFT, FlxObject.RIGHT:
-						animation.play("walklr");
-					case FlxObject.UP, FlxObject.DOWN:
-						animation.play("walkud");
+					case FlxObject.LEFT:
+						animation.play("l");
+					case FlxObject.RIGHT:
+						animation.play("r");
+					case FlxObject.UP:
+						animation.play("u");
+					case FlxObject.DOWN:
+						animation.play("d");
 				}
+			}
+			else
+			{
+				animation.stop();
 			}
 			
 		}

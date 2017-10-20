@@ -34,11 +34,27 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/data/placeHolder.tsx");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/data/player.tsx");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/data/run debug.txt");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
 		urls.push ("assets/data/Walmart.oel");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
 		urls.push ("assets/data/Walmart.oep");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/data/walmart.tmx");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
@@ -50,8 +66,16 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/walkmc.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/music/music-goes-here.txt");
 		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/sounds/crowdAmbient.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
 		urls.push ("assets/sounds/sounds-go-here.txt");
@@ -143,7 +167,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "13",
+			build: "48",
 			company: "ninjaMuffin",
 			file: "XmasAnxiety",
 			fps: 60,
