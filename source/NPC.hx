@@ -2,6 +2,7 @@ package;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
+import flixel.addons.transition.FlxTransitionableState;
 import flixel.math.FlxPoint;
 import flixel.system.FlxAssets.FlxGraphicAsset;
 import flixel.util.FlxColor;
@@ -16,6 +17,8 @@ class NPC extends FlxSprite
 	private var _idleTmr:Float;
 	private var _moveDir:Float;
 	private var speed:Float = 140;
+	
+	public var leaving:Bool = false;
 
 	public function new(?X:Float=0, ?Y:Float=0) 
 	{
@@ -31,6 +34,10 @@ class NPC extends FlxSprite
 	
 	public function idle():Void
 	{
+		if (leaving)
+		{
+			_brain.activeState = leavingStore;
+		}
 		if (_idleTmr <= 0)
 		{
 			if (FlxG.random.bool(1))
@@ -51,9 +58,9 @@ class NPC extends FlxSprite
 			_idleTmr -= FlxG.elapsed;
 	}
 	
-	public function leaving():Void
+	public function leavingStore():Void
 	{
-		this.path.start(
+		
 	}
 	
 	override public function update(elapsed:Float):Void 

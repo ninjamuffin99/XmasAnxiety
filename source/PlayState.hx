@@ -10,6 +10,8 @@ import flixel.addons.editors.tiled.TiledObjectLayer;
 import flixel.addons.editors.tiled.TiledTileLayer;
 import flixel.group.FlxGroup;
 import flixel.group.FlxSpriteGroup;
+import flixel.input.FlxPointer;
+import flixel.math.FlxPoint;
 import flixel.text.FlxText;
 import flixel.tile.FlxBaseTilemap.FlxTilemapAutoTiling;
 import flixel.tile.FlxTilemap;
@@ -57,7 +59,7 @@ class PlayState extends FlxState
 		_grpNPCs = new FlxTypedGroup<NPC>();
 		add(_grpNPCs);
 		
-		_peopleCount = FlxG.random.int(100, 600);
+		_peopleCount = FlxG.random.int(400, 600);
 		FlxG.log.add("people added: " + _peopleCount);
 		while (_peopleCount > 0)
 		{
@@ -131,6 +133,7 @@ class PlayState extends FlxState
 		FlxG.collide(_grpNPCs, _mWalls);
 		
 		_grpNPCs.forEachAlive(checkNPCVision);
+		_grpNPCs.forEachAlive(_mapLeaveCheck);
 		
 		_grpPickupSpots.forEachAlive(pickupItem);
 		
@@ -150,11 +153,29 @@ class PlayState extends FlxState
 	}
 	
 	private function checkNPCVision(npc:NPC):Void
+	
 	{
-		if (_mWalls.ray(npc.getMidpoint(), _player.getMidpoint()) && FlxMath.isDistanceWithin(_player, npc, 200))
+		if (_mWalls.ray(npc.getMidpoint(), _player.getMidpoint()) && FlxMath.isDistanceWithin(_player, npc, 150))
 		{
 			_player.anxiety += 0.1;
 		}
+	}
+	
+	private function _mapLeaveCheck(npc:NPC):Void
+	{
+		/* super laggy
+		if (FlxG.random.bool(1))
+		{
+			npc.leaving = true;
+			
+			var pathPoints:Array<FlxPoint> = _mWalls.findPath(
+				FlxPoint.get(npc.x + npc.width / 2, npc.y + npc.height / 2),
+				FlxPoint.get(1313, 3300)); // these are just values for doors on left side
+			
+			npc.path.start(pathPoints);
+			FlxG.log.add("someone left");
+		}
+		*/
 	}
 	
 	private function pickupItem(pickupSpot:PickupSpot):Void
