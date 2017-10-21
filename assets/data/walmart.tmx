@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="150" height="110" tilewidth="32" tileheight="32" nextobjectid="19">
+<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="150" height="110" tilewidth="32" tileheight="32" nextobjectid="35">
  <tileset firstgid="1" source="placeHolder.tsx"/>
  <tileset firstgid="4" source="player.tsx"/>
  <layer name="walls" width="150" height="110">
@@ -116,7 +116,9 @@
 3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
 </data>
  </layer>
- <objectgroup color="#0c0000" name="entities" offsetx="-632.667" offsety="-1089.45">
-  <object id="17" name="player" gid="4" x="1482.91" y="3286.18" width="32" height="64"/>
+ <objectgroup color="#0c0000" name="entities">
+  <object id="17" name="player" type="player" gid="4" x="534.198" y="814.165" width="32" height="64"/>
+  <object id="29" name="NPC" type="npc" x="311.5" y="255.5" width="32" height="64"/>
+  <object id="34" name="NPC" type="npc" x="498.5" y="136.5" width="32" height="64"/>
  </objectgroup>
 </map>

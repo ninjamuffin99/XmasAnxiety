@@ -38,7 +38,7 @@ class PlayState extends FlxState
 		_mWalls.setTileProperties(3, FlxObject.ANY);
 		add(_mWalls);
 		
-		_player = new Player(50, 50);
+		_player = new Player();
 		add(_player);
 		
 		_grpNPCs = new FlxTypedGroup<NPC>();
@@ -109,7 +109,7 @@ class PlayState extends FlxState
 	
 	private function checkNPCVision(npc:NPC):Void
 	{
-		if (_mWalls.ray(npc.getMidpoint(), _player.getMidpoint()))
+		if (_mWalls.ray(npc.getMidpoint(), _player.getMidpoint()) && FlxMath.isDistanceWithin(_player, npc, 200))
 		{
 			_player.anxiety += 0.1;
 		}

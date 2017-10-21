@@ -34,7 +34,7 @@ class Player extends FlxSprite
 		height = 16;
 		offset.y = 48;
 		
-		drag.x = drag.y = 550;
+		drag.x = drag.y = 650;
 	}
 	
 	override public function update(elapsed:Float):Void 
