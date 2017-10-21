@@ -32,6 +32,8 @@ class PlayState extends FlxState
 	
 	private var _anxietyText:FlxText;
 	
+	private var _peopleCount:Int;
+	
 	private var _list:Array<String>;
 	private var _listText:FlxText;
 	
@@ -54,6 +56,17 @@ class PlayState extends FlxState
 		
 		_grpNPCs = new FlxTypedGroup<NPC>();
 		add(_grpNPCs);
+		
+		_peopleCount = FlxG.random.int(100, 1000);
+		FlxG.log.add("people added: " + _peopleCount);
+		while (_peopleCount > 0)
+		{
+			_grpNPCs.add(new NPC(FlxG.random.float(32, _mWalls.width), FlxG.random.float(32, _mWalls.height)));
+			_peopleCount -= 1;
+		}
+		
+		
+		_grpNPCs.add(new NPC(FlxG.random.float(32, _map.width), FlxG.random.float(32, _map.height)));
 		
 		_grpPickupSpots = new FlxTypedGroup<PickupSpot>();
 		add(_grpPickupSpots);
@@ -116,6 +129,7 @@ class PlayState extends FlxState
 		
 		controls();
 		FlxG.collide(_player, _mWalls);
+		FlxG.collide(_grpNPCs, _mWalls);
 		
 		_grpNPCs.forEachAlive(checkNPCVision);
 		
