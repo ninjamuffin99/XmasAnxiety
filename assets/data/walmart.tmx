@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="150" height="110" tilewidth="32" tileheight="32" nextobjectid="40">
+<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="150" height="110" tilewidth="32" tileheight="32" nextobjectid="63">
  <tileset firstgid="1" source="placeHolder.tsx"/>
  <tileset firstgid="4" source="player.tsx"/>
  <layer name="walls" width="150" height="110">
@@ -126,6 +126,61 @@
    </properties>
   </object>
   <object id="39" name="pickups" type="pickups" x="504" y="304" width="32" height="128">
+   <properties>
+    <property name="itemType" value="appliance"/>
+   </properties>
+  </object>
+  <object id="52" name="pickups" type="pickups" x="288" y="928" width="38.6667" height="31.6667">
+   <properties>
+    <property name="itemType" value="appliance"/>
+   </properties>
+  </object>
+  <object id="53" name="pickups" type="pickups" x="288" y="1088" width="38.6667" height="31.6667">
+   <properties>
+    <property name="itemType" value="appliance"/>
+   </properties>
+  </object>
+  <object id="54" name="pickups" type="pickups" x="288" y="1248" width="38.6667" height="31.6667">
+   <properties>
+    <property name="itemType" value="appliance"/>
+   </properties>
+  </object>
+  <object id="55" name="pickups" type="pickups" x="288" y="1408" width="38.6667" height="31.6667">
+   <properties>
+    <property name="itemType" value="appliance"/>
+   </properties>
+  </object>
+  <object id="56" name="pickups" type="pickups" x="288" y="1568" width="38.6667" height="31.6667">
+   <properties>
+    <property name="itemType" value="appliance"/>
+   </properties>
+  </object>
+  <object id="57" name="pickups" type="pickups" x="288" y="1728" width="38.6667" height="31.6667">
+   <properties>
+    <property name="itemType" value="appliance"/>
+   </properties>
+  </object>
+  <object id="58" name="pickups" type="pickups" x="288" y="1888" width="38.6667" height="31.6667">
+   <properties>
+    <property name="itemType" value="appliance"/>
+   </properties>
+  </object>
+  <object id="59" name="pickups" type="pickups" x="288" y="2048" width="38.6667" height="31.6667">
+   <properties>
+    <property name="itemType" value="appliance"/>
+   </properties>
+  </object>
+  <object id="60" name="pickups" type="pickups" x="288" y="2208" width="38.6667" height="31.6667">
+   <properties>
+    <property name="itemType" value="appliance"/>
+   </properties>
+  </object>
+  <object id="61" name="pickups" type="pickups" x="288" y="2368" width="38.6667" height="31.6667">
+   <properties>
+    <property name="itemType" value="appliance"/>
+   </properties>
+  </object>
+  <object id="62" name="pickups" type="pickups" x="288" y="2528" width="38.6667" height="31.6667">
    <properties>
     <property name="itemType" value="appliance"/>
    </properties>
