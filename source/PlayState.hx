@@ -31,6 +31,8 @@ class PlayState extends FlxState
 	private var _camZoom:Float = 0.7;
 	
 	private var _anxietyText:FlxText;
+	
+	private var _list:Array<String>;
 	private var _listText:FlxText;
 	
 	override public function create():Void
@@ -68,6 +70,8 @@ class PlayState extends FlxState
 		
 		createHUD();
 		
+		FlxG.sound.play(AssetPaths.crowdAmbient__mp3, 0.7, true);
+		
 		super.create();
 	}
 	
@@ -96,7 +100,10 @@ class PlayState extends FlxState
 		_anxietyText = new FlxText(20, 20, 0, "anxiety: ", 30);
 		add(_anxietyText);
 		
-		_listText = new FlxText(20, 400, 0, FlxG.random.getObject(Reg.items) + "\n" + FlxG.random.getObject(Reg.items), 20);
+		_list = Reg.items;
+		FlxG.random.shuffle(_list);
+		
+		_listText = new FlxText(20, 350, 0, Std.string(_list), 20);
 		add(_listText);
 		
 		_anxietyText.scrollFactor.x = _anxietyText.scrollFactor.y = 0;
@@ -111,6 +118,8 @@ class PlayState extends FlxState
 		FlxG.collide(_player, _mWalls);
 		
 		_grpNPCs.forEachAlive(checkNPCVision);
+		
+		_grpPickupSpots.forEachAlive(pickupItem);
 		
 		_anxietyText.text = "Anxiety: " + _player.anxiety;
 	}
@@ -132,6 +141,16 @@ class PlayState extends FlxState
 		if (_mWalls.ray(npc.getMidpoint(), _player.getMidpoint()) && FlxMath.isDistanceWithin(_player, npc, 200))
 		{
 			_player.anxiety += 0.1;
+		}
+	}
+	
+	private function pickupItem(pickupSpot:PickupSpot):Void
+	{
+		if (FlxG.overlap(pickupSpot, _player) && FlxG.keys.justReleased.SPACE)
+		{
+			pickupSpot.kill();
+			_list.splice(FlxG.random.int(0, _list.length), 1);
+			_listText.text = Std.string(_list);
 		}
 	}
 }
