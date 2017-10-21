@@ -3,6 +3,7 @@ package;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
+import flixel.math.FlxMath;
 import flixel.math.FlxPoint;
 import flixel.system.FlxAssets.FlxGraphicAsset;
 
@@ -34,15 +35,14 @@ class Player extends FlxSprite
 		height = 16;
 		offset.y = 48;
 		
-		drag.x = drag.y = 650;
+		drag.x = drag.y = 1000;
 	}
 	
 	override public function update(elapsed:Float):Void 
 	{
-		controls();
-		
 		super.update(elapsed);
 		
+		controls();
 	}
 	
 	private function controls():Void

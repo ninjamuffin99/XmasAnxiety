@@ -9,6 +9,7 @@ import flixel.addons.editors.tiled.TiledMap;
 import flixel.addons.editors.tiled.TiledObjectLayer;
 import flixel.addons.editors.tiled.TiledTileLayer;
 import flixel.group.FlxGroup;
+import flixel.group.FlxSpriteGroup;
 import flixel.text.FlxText;
 import flixel.tile.FlxBaseTilemap.FlxTilemapAutoTiling;
 import flixel.tile.FlxTilemap;
@@ -18,7 +19,10 @@ import flixel.math.FlxMath;
 class PlayState extends FlxState
 {
 	private var _player:Player;
+	private var _cameraFocus:FlxSprite;
+	
 	private var _grpNPCs:FlxTypedGroup<NPC>;
+	private var _grpPickupSpots:FlxTypedGroup<PickupSpot>;
 	
 	
 	private var _map:TiledMap;
@@ -27,9 +31,14 @@ class PlayState extends FlxState
 	private var _camZoom:Float = 0.7;
 	
 	private var _anxietyText:FlxText;
+	private var _listText:FlxText;
 	
 	override public function create():Void
 	{
+		_cameraFocus = new FlxSprite();
+		_cameraFocus.makeGraphic(1, 1);
+		add(_cameraFocus);
+		
 		_map = new TiledMap(AssetPaths.walmart__tmx);
 		_mWalls = new FlxTilemap();
 		_mWalls.loadMapFromArray(cast(_map.getLayer("walls"), TiledTileLayer).tileArray, _map.width, _map.height, AssetPaths.tiles__png, _map.tileWidth, _map.tileHeight, FlxTilemapAutoTiling.OFF, 1, 1, 3);
@@ -44,6 +53,9 @@ class PlayState extends FlxState
 		_grpNPCs = new FlxTypedGroup<NPC>();
 		add(_grpNPCs);
 		
+		_grpPickupSpots = new FlxTypedGroup<PickupSpot>();
+		add(_grpPickupSpots);
+		
 		var tmpMap:TiledObjectLayer = cast _map.getLayer("entities");
 		for (e in tmpMap.objects)
 		{
@@ -51,7 +63,7 @@ class PlayState extends FlxState
 		}
 		
 		//FlxG.camera.zoom = _camZoom;
-		FlxG.camera.follow(_player, LOCKON);
+		FlxG.camera.follow(_player, LOCKON, 0.05);
 		//FlxG.worldBounds.set(0, 0, _map.width, _map.height);
 		
 		createHUD();
@@ -69,6 +81,10 @@ class PlayState extends FlxState
 			_player.x = x;
 			_player.y = y;
 		}
+		if (entityName == "pickups")
+		{
+			_grpPickupSpots.add(new PickupSpot(x, y));
+		}
 		else if (entityName == "npc")
 		{
 			_grpNPCs.add(new NPC(x, y));
@@ -80,7 +96,11 @@ class PlayState extends FlxState
 		_anxietyText = new FlxText(20, 20, 0, "anxiety: ", 30);
 		add(_anxietyText);
 		
+		_listText = new FlxText(20, 400, 0, FlxG.random.getObject(Reg.items) + "\n" + FlxG.random.getObject(Reg.items), 20);
+		add(_listText);
+		
 		_anxietyText.scrollFactor.x = _anxietyText.scrollFactor.y = 0;
+		_listText.scrollFactor.x = _listText.scrollFactor.y = 0;
 	}
 
 	override public function update(elapsed:Float):Void
