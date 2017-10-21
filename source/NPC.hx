@@ -22,6 +22,9 @@ class NPC extends FlxSprite
 		super(X, Y);
 		makeGraphic(32, 64, FlxColor.RED);
 		
+		height = 16;
+		offset.y = 48;
+		
 		_brain = new FSM(idle);
 		_idleTmr = 0;
 	}
@@ -46,6 +49,11 @@ class NPC extends FlxSprite
 		}
 		else
 			_idleTmr -= FlxG.elapsed;
+	}
+	
+	public function leaving():Void
+	{
+		this.path.start(
 	}
 	
 	override public function update(elapsed:Float):Void 

@@ -26,7 +26,7 @@ class PlayState extends FlxState
 	
 	
 	private var _map:TiledMap;
-	private var _mWalls:FlxTilemap;
+	public var _mWalls:FlxTilemap;
 	
 	private var _camZoom:Float = 0.7;
 	
@@ -76,7 +76,8 @@ class PlayState extends FlxState
 		}
 		
 		//FlxG.camera.zoom = _camZoom;
-		FlxG.camera.follow(_player, LOCKON, 0.05);
+		FlxG.camera.follow(_player, LOCKON, 0.1);
+		FlxG.camera.followLead.x = FlxG.camera.followLead.y = 30;
 		//FlxG.worldBounds.set(0, 0, _map.width, _map.height);
 		
 		createHUD();
