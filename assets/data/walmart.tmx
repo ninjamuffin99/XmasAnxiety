@@ -118,7 +118,7 @@
     <property name="itemType" value="appliance"/>
    </properties>
   </object>
-  <object id="39" name="pickups" type="pickups" x="504" y="304" width="32" height="128">
+  <object id="39" name="pickups" type="pickupsAppliance" x="504" y="304" width="32" height="128">
    <properties>
     <property name="itemType" type="int" value="22"/>
    </properties>
