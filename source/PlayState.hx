@@ -6,6 +6,7 @@ import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.addons.editors.ogmo.FlxOgmoLoader;
 import flixel.addons.editors.tiled.TiledMap;
+import flixel.addons.editors.tiled.TiledObject;
 import flixel.addons.editors.tiled.TiledObjectLayer;
 import flixel.addons.editors.tiled.TiledTileLayer;
 import flixel.group.FlxGroup;
@@ -93,6 +94,7 @@ class PlayState extends FlxState
 	{
 		var x:Int = Std.parseInt(entityData.get("x"));
 		var y:Int = Std.parseInt(entityData.get("y"));
+		var eventid:Int = Std.parseInt(_map.properties.get("itemType"));
 		
 		if (entityName == "player")
 		{
@@ -101,7 +103,7 @@ class PlayState extends FlxState
 		}
 		if (entityName == "pickups")
 		{
-			_grpPickupSpots.add(new PickupSpot(x, y, _map.properties.get("itemType")));
+			_grpPickupSpots.add(new PickupSpot(x, y, eventid));
 		}
 		else if (entityName == "npc")
 		{

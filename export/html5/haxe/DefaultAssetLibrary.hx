@@ -101,10 +101,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sounds/crowdAmbient.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/sounds-go-here.txt", __ASSET__assets_sounds_sounds_go_here_txt);
 		type.set ("assets/sounds/sounds-go-here.txt", AssetType.TEXT);
-		className.set ("flixel/sounds/beep.mp3", __ASSET__flixel_sounds_beep_mp3);
-		type.set ("flixel/sounds/beep.mp3", AssetType.MUSIC);
-		className.set ("flixel/sounds/flixel.mp3", __ASSET__flixel_sounds_flixel_mp3);
-		type.set ("flixel/sounds/flixel.mp3", AssetType.MUSIC);
+		className.set ("flixel/sounds/beep.ogg", __ASSET__flixel_sounds_beep_ogg);
+		type.set ("flixel/sounds/beep.ogg", AssetType.SOUND);
+		className.set ("flixel/sounds/flixel.ogg", __ASSET__flixel_sounds_flixel_ogg);
+		type.set ("flixel/sounds/flixel.ogg", AssetType.SOUND);
 		className.set ("flixel/fonts/nokiafc22.ttf", __ASSET__flixel_fonts_nokiafc22_ttf);
 		type.set ("flixel/fonts/nokiafc22.ttf", AssetType.FONT);
 		className.set ("flixel/fonts/monsterrat.ttf", __ASSET__flixel_fonts_monsterrat_ttf);
@@ -170,14 +170,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
-		id = "flixel/sounds/beep.mp3";
+		id = "flixel/sounds/beep.ogg";
 		path.set (id, id);
 		
-		type.set (id, AssetType.MUSIC);
-		id = "flixel/sounds/flixel.mp3";
+		type.set (id, AssetType.SOUND);
+		id = "flixel/sounds/flixel.ogg";
 		path.set (id, id);
 		
-		type.set (id, AssetType.MUSIC);
+		type.set (id, AssetType.SOUND);
 		id = "flixel/fonts/nokiafc22.ttf";
 		className.set (id, __ASSET__flixel_fonts_nokiafc22_ttf);
 		
@@ -251,11 +251,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/sounds/sounds-go-here.txt", __ASSET__assets_sounds_sounds_go_here_txt);
 		type.set ("assets/sounds/sounds-go-here.txt", AssetType.TEXT);
 		
-		className.set ("flixel/sounds/beep.mp3", __ASSET__flixel_sounds_beep_mp3);
-		type.set ("flixel/sounds/beep.mp3", AssetType.MUSIC);
+		className.set ("flixel/sounds/beep.ogg", __ASSET__flixel_sounds_beep_ogg);
+		type.set ("flixel/sounds/beep.ogg", AssetType.SOUND);
 		
-		className.set ("flixel/sounds/flixel.mp3", __ASSET__flixel_sounds_flixel_mp3);
-		type.set ("flixel/sounds/flixel.mp3", AssetType.MUSIC);
+		className.set ("flixel/sounds/flixel.ogg", __ASSET__flixel_sounds_flixel_ogg);
+		type.set ("flixel/sounds/flixel.ogg", AssetType.SOUND);
 		
 		className.set ("flixel/fonts/nokiafc22.ttf", __ASSET__flixel_fonts_nokiafc22_ttf);
 		type.set ("flixel/fonts/nokiafc22.ttf", AssetType.FONT);
@@ -913,23 +913,23 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if !display
 #if flash
 
-@:keep @:bind #if display private #end class __ASSET__assets_data_data_goes_here_txt extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_placeholder_tsx extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_player_tsx extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_run_debug_txt extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_walmart_oel extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_walmart_oep extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_walmart_tmx extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_images_images_go_here_txt extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_data_goes_here_txt extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_placeholder_tsx extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_player_tsx extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_run_debug_txt extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_walmart_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_walmart_oep extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_walmart_tmx extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_images_go_here_txt extends null { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tiles_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_walkmc_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind #if display private #end class __ASSET__assets_music_music_goes_here_txt extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_sounds_crowdambient_mp3 extends flash.media.Sound { }
-@:keep @:bind #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_mp3 extends flash.media.Sound { }
-@:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_mp3 extends flash.media.Sound { }
-@:keep @:bind #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends flash.text.Font { }
-@:keep @:bind #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends flash.text.Font { }
+@:keep @:bind #if display private #end class __ASSET__assets_music_music_goes_here_txt extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_crowdambient_mp3 extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends null { }
+@:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_ogg extends null { }
+@:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends null { }
+@:keep @:bind #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends null { }
+@:keep @:bind #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_images_ui_button_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__flixel_images_logo_default_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 
@@ -977,8 +977,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/music/music-goes-here.txt") #if display private #end class __ASSET__assets_music_music_goes_here_txt extends lime.utils.Bytes {}
 @:file("assets/sounds/crowdAmbient.mp3") #if display private #end class __ASSET__assets_sounds_crowdambient_mp3 extends lime.utils.Bytes {}
 @:file("assets/sounds/sounds-go-here.txt") #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends lime.utils.Bytes {}
-@:file("C:/HaxeToolkit/haxe/lib/flixel/4,2,0/assets/sounds/beep.mp3") #if display private #end class __ASSET__flixel_sounds_beep_mp3 extends lime.utils.Bytes {}
-@:file("C:/HaxeToolkit/haxe/lib/flixel/4,2,0/assets/sounds/flixel.mp3") #if display private #end class __ASSET__flixel_sounds_flixel_mp3 extends lime.utils.Bytes {}
+@:file("C:/HaxeToolkit/haxe/lib/flixel/4,2,0/assets/sounds/beep.ogg") #if display private #end class __ASSET__flixel_sounds_beep_ogg extends lime.utils.Bytes {}
+@:file("C:/HaxeToolkit/haxe/lib/flixel/4,2,0/assets/sounds/flixel.ogg") #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends lime.utils.Bytes {}
 @:font("C:/HaxeToolkit/haxe/lib/flixel/4,2,0/assets/fonts/nokiafc22.ttf") #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font {}
 @:font("C:/HaxeToolkit/haxe/lib/flixel/4,2,0/assets/fonts/monsterrat.ttf") #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font {}
 @:image("C:/HaxeToolkit/haxe/lib/flixel/4,2,0/assets/images/ui/button.png") #if display private #end class __ASSET__flixel_images_ui_button_png extends lime.graphics.Image {}
