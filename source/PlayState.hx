@@ -41,7 +41,7 @@ class PlayState extends FlxState
 	private var _listText:FlxText;
 	
 	private var _timer:Float;
-	private var _timerText:Float;
+	private var _timerText:FlxText;
 	
 	override public function create():Void
 	{
@@ -131,7 +131,7 @@ class PlayState extends FlxState
 		_listText.scrollFactor.x = _listText.scrollFactor.y = 0;
 		
 		_timer = 600;
-		_timerText = new FlxText(20, 60, 0, _timer, 25);
+		_timerText = new FlxText(20, 60, 0, Std.string(_timer), 25);
 		add(_timerText);
 		_timerText.scrollFactor.x = _timerText.scrollFactor.y = 0;
 	}
@@ -139,6 +139,9 @@ class PlayState extends FlxState
 	override public function update(elapsed:Float):Void
 	{
 		super.update(elapsed);
+		
+		_timer -= FlxG.elapsed;
+		_timerText.text = "0:" + Std.string(Math.floor(FlxMath.remapToRange(_timer, 0, 600, 0, 60)) + " mins until closing!");
 		
 		controls();
 		FlxG.collide(_player, _mWalls);
