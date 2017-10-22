@@ -67,6 +67,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -82,6 +83,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/placeHolder.tsx", AssetType.TEXT);
 		className.set ("assets/data/player.tsx", __ASSET__assets_data_player_tsx);
 		type.set ("assets/data/player.tsx", AssetType.TEXT);
+		className.set ("assets/data/roughTiles.tsx", __ASSET__assets_data_roughtiles_tsx);
+		type.set ("assets/data/roughTiles.tsx", AssetType.TEXT);
 		className.set ("assets/data/run debug.txt", __ASSET__assets_data_run_debug_txt);
 		type.set ("assets/data/run debug.txt", AssetType.TEXT);
 		className.set ("assets/data/Walmart.oel", __ASSET__assets_data_walmart_oel);
@@ -130,6 +133,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.TEXT);
 		id = "assets/data/player.tsx";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/roughTiles.tsx";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -227,6 +234,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/data/player.tsx", __ASSET__assets_data_player_tsx);
 		type.set ("assets/data/player.tsx", AssetType.TEXT);
+		
+		className.set ("assets/data/roughTiles.tsx", __ASSET__assets_data_roughtiles_tsx);
+		type.set ("assets/data/roughTiles.tsx", AssetType.TEXT);
 		
 		className.set ("assets/data/run debug.txt", __ASSET__assets_data_run_debug_txt);
 		type.set ("assets/data/run debug.txt", AssetType.TEXT);
@@ -926,6 +936,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_data_data_goes_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_placeholder_tsx extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_player_tsx extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_roughtiles_tsx extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_run_debug_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_walmart_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_walmart_oep extends flash.utils.ByteArray { }
@@ -963,6 +974,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
 @:keep #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font { public function new () { super (); name = "Nokia Cellphone FC Small"; } } 
 @:keep #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font { public function new () { super (); name = "Monsterrat"; } } 
 
@@ -979,6 +991,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/data/data-goes-here.txt") #if display private #end class __ASSET__assets_data_data_goes_here_txt extends lime.utils.Bytes {}
 @:file("assets/data/placeHolder.tsx") #if display private #end class __ASSET__assets_data_placeholder_tsx extends lime.utils.Bytes {}
 @:file("assets/data/player.tsx") #if display private #end class __ASSET__assets_data_player_tsx extends lime.utils.Bytes {}
+@:file("assets/data/roughTiles.tsx") #if display private #end class __ASSET__assets_data_roughtiles_tsx extends lime.utils.Bytes {}
 @:file("assets/data/run debug.txt") #if display private #end class __ASSET__assets_data_run_debug_txt extends lime.utils.Bytes {}
 @:file("assets/data/Walmart.oel") #if display private #end class __ASSET__assets_data_walmart_oel extends lime.utils.Bytes {}
 @:file("assets/data/Walmart.oep") #if display private #end class __ASSET__assets_data_walmart_oep extends lime.utils.Bytes {}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="150" height="103" tilewidth="32" tileheight="32" nextobjectid="66">
+<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="150" height="103" tilewidth="32" tileheight="32" nextobjectid="88">
  <tileset firstgid="1" source="placeHolder.tsx"/>
  <tileset firstgid="4" source="player.tsx"/>
  <layer name="walls" width="150" height="103">
@@ -113,67 +113,112 @@
   <object id="17" name="player" type="player" gid="4" x="3828.2" y="3150.83" width="32" height="64"/>
   <object id="29" name="NPC" type="npc" x="128" y="128" width="32" height="64"/>
   <object id="34" name="NPC" type="npc" x="512" y="160" width="32" height="64"/>
-  <object id="36" name="pickups" type="pickups" x="320" y="352" width="32" height="128">
-   <properties>
-    <property name="itemType" value="appliance"/>
-   </properties>
-  </object>
-  <object id="39" name="pickups" type="pickupsAppliance" x="504" y="304" width="32" height="128">
+  <object id="39" name="pickupsAppliance" type="pickupsAppliance" x="316" y="319.333" width="32" height="128">
    <properties>
     <property name="itemType" type="int" value="22"/>
    </properties>
   </object>
-  <object id="52" name="pickups" type="pickups" x="288" y="928" width="38.6667" height="31.6667">
+  <object id="52" name="pickupsToy" type="pickupsToy" x="288" y="928" width="38.6667" height="31.6667">
    <properties>
     <property name="itemType" value="appliance"/>
    </properties>
   </object>
-  <object id="53" name="pickups" type="pickups" x="288" y="1088" width="38.6667" height="31.6667">
+  <object id="66" name="pickupsAppliance" type="pickupsAppliance" x="506.667" y="294" width="32" height="128">
+   <properties>
+    <property name="itemType" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="67" name="pickupsVideoGame" type="pickupsVideoGame" x="892" y="285.333" width="32" height="128">
+   <properties>
+    <property name="itemType" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="68" name="pickupsVideoGame" type="pickupsVideoGame" x="1073.33" y="274.667" width="32" height="128">
+   <properties>
+    <property name="itemType" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="70" name="pickupsAppliance" type="pickupsAppliance" x="704" y="256" width="32" height="128">
+   <properties>
+    <property name="itemType" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="72" name="pickupsElectronic" type="pickupsElectronic" x="1280" y="224" width="32" height="128">
+   <properties>
+    <property name="itemType" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="73" name="pickupsElectronic" type="pickupsElectronic" x="1462.67" y="240" width="32" height="128">
+   <properties>
+    <property name="itemType" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="74" name="pickupsElectronic" type="pickupsElectronic" x="1696" y="224" width="32" height="128">
+   <properties>
+    <property name="itemType" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="75" name="pickupsElectronic" type="pickupsElectronic" x="1792" y="256" width="32" height="128">
+   <properties>
+    <property name="itemType" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="76" name="pickupsElectronic" type="pickupsElectronic" x="1952" y="256" width="32" height="128">
+   <properties>
+    <property name="itemType" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="77" name="pickupsElectronic" type="pickupsElectronic" x="2016" y="256" width="32" height="128">
+   <properties>
+    <property name="itemType" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="78" name="pickupsElectronic" type="pickupsElectronic" x="2208" y="256" width="32" height="128">
+   <properties>
+    <property name="itemType" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="79" name="pickupsElectronic" type="pickupsElectronic" x="2400" y="256" width="32" height="128">
+   <properties>
+    <property name="itemType" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="80" name="pickupsToy" type="pickupsToy" x="288" y="1088" width="38.6667" height="31.6667">
    <properties>
     <property name="itemType" value="appliance"/>
    </properties>
   </object>
-  <object id="54" name="pickups" type="pickups" x="288" y="1248" width="38.6667" height="31.6667">
+  <object id="81" name="pickupsToy" type="pickupsToy" x="285.333" y="1248" width="38.6667" height="31.6667">
    <properties>
     <property name="itemType" value="appliance"/>
    </properties>
   </object>
-  <object id="55" name="pickups" type="pickups" x="288" y="1408" width="38.6667" height="31.6667">
+  <object id="82" name="pickupsToy" type="pickupsToy" x="288" y="1408" width="38.6667" height="31.6667">
    <properties>
     <property name="itemType" value="appliance"/>
    </properties>
   </object>
-  <object id="56" name="pickups" type="pickups" x="288" y="1568" width="38.6667" height="31.6667">
+  <object id="83" name="pickupsToy" type="pickupsToy" x="288" y="1568" width="38.6667" height="31.6667">
    <properties>
     <property name="itemType" value="appliance"/>
    </properties>
   </object>
-  <object id="57" name="pickups" type="pickups" x="288" y="1728" width="38.6667" height="31.6667">
+  <object id="84" name="pickupsToy" type="pickupsToy" x="288" y="1696" width="38.6667" height="31.6667">
    <properties>
     <property name="itemType" value="appliance"/>
    </properties>
   </object>
-  <object id="58" name="pickups" type="pickups" x="288" y="1888" width="38.6667" height="31.6667">
+  <object id="85" name="pickupsToy" type="pickupsToy" x="288" y="1888" width="38.6667" height="31.6667">
    <properties>
     <property name="itemType" value="appliance"/>
    </properties>
   </object>
-  <object id="59" name="pickups" type="pickups" x="288" y="2048" width="38.6667" height="31.6667">
+  <object id="86" name="pickupsToy" type="pickupsToy" x="288" y="1984" width="38.6667" height="31.6667">
    <properties>
     <property name="itemType" value="appliance"/>
    </properties>
   </object>
-  <object id="60" name="pickups" type="pickups" x="288" y="2208" width="38.6667" height="31.6667">
-   <properties>
-    <property name="itemType" value="appliance"/>
-   </properties>
-  </object>
-  <object id="61" name="pickups" type="pickups" x="288" y="2368" width="38.6667" height="31.6667">
-   <properties>
-    <property name="itemType" value="appliance"/>
-   </properties>
-  </object>
-  <object id="62" name="pickups" type="pickups" x="288" y="2528" width="38.6667" height="31.6667">
+  <object id="87" name="pickupsToy" type="pickupsToy" x="288" y="2144" width="38.6667" height="31.6667">
    <properties>
     <property name="itemType" value="appliance"/>
    </properties>

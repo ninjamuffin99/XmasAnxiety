@@ -42,6 +42,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/data/roughTiles.tsx");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
 		urls.push ("assets/data/run debug.txt");
 		types.push (lime.Assets.AssetType.TEXT);
 		
@@ -171,7 +175,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "154",
+			build: "158",
 			company: "ninjaMuffin",
 			file: "XmasAnxiety",
 			fps: 60,

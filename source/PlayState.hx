@@ -99,16 +99,32 @@ class PlayState extends FlxState
 	{
 		var x:Int = Std.parseInt(entityData.get("x"));
 		var y:Int = Std.parseInt(entityData.get("y"));
-		var eventid:Int = Std.parseInt(_map.properties.get("itemType"));
 		
 		if (entityName == "player")
 		{
 			_player.x = x;
 			_player.y = y;
 		}
+		if (entityName == "pickupsAppliance")
+		{
+			_grpPickupSpots.add(new PickupSpot(x, y, 0));
+		}
+		if (entityName == "pickupsVideoGame")
+		{
+			_grpPickupSpots.add(new PickupSpot(x, y, 1));
+		}
+		if (entityName == "pickupsElectronic")
+		{
+			_grpPickupSpots.add(new PickupSpot(x, y, 2));
+		}
+		if (entityName == "pickupsToy")
+		{
+			_grpPickupSpots.add(new PickupSpot(x, y, 3));
+		}
+		
 		if (entityName == "pickups")
 		{
-			_grpPickupSpots.add(new PickupSpot(x, y, eventid));
+			_grpPickupSpots.add(new PickupSpot(x, y));
 		}
 		else if (entityName == "npc")
 		{
