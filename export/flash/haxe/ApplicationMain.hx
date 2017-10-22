@@ -66,6 +66,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/tileset1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/walkmc.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -167,7 +171,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "143",
+			build: "147",
 			company: "ninjaMuffin",
 			file: "XmasAnxiety",
 			fps: 60,

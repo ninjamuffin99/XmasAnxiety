@@ -40,6 +40,9 @@ class PlayState extends FlxState
 	private var _list:Array<String>;
 	private var _listText:FlxText;
 	
+	private var _timer:Float;
+	private var _timerText:Float;
+	
 	override public function create():Void
 	{
 		_cameraFocus = new FlxSprite();
@@ -83,6 +86,8 @@ class PlayState extends FlxState
 		FlxG.camera.followLead.x = FlxG.camera.followLead.y = 30;
 		//FlxG.worldBounds.set(0, 0, _map.width, _map.height);
 		
+		
+		
 		createHUD();
 		
 		FlxG.sound.play(AssetPaths.crowdAmbient__mp3, 0.7, true);
@@ -124,6 +129,11 @@ class PlayState extends FlxState
 		
 		_anxietyText.scrollFactor.x = _anxietyText.scrollFactor.y = 0;
 		_listText.scrollFactor.x = _listText.scrollFactor.y = 0;
+		
+		_timer = 600;
+		_timerText = new FlxText(20, 60, 0, _timer, 25);
+		add(_timerText);
+		_timerText.scrollFactor.x = _timerText.scrollFactor.y = 0;
 	}
 
 	override public function update(elapsed:Float):Void
@@ -157,7 +167,7 @@ class PlayState extends FlxState
 	private function checkNPCVision(npc:NPC):Void
 	
 	{
-		if (_mWalls.ray(npc.getMidpoint(), _player.getMidpoint()) && FlxMath.isDistanceWithin(_player, npc, 150))
+		if (_mWalls.ray(npc.getMidpoint(), _player.getMidpoint()) && FlxMath.isDistanceWithin(_player, npc, 100))
 		{
 			_player.anxiety += 0.1;
 		}

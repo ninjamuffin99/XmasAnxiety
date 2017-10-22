@@ -66,6 +66,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -93,6 +94,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
 		className.set ("assets/images/tiles.png", __ASSET__assets_images_tiles_png);
 		type.set ("assets/images/tiles.png", AssetType.IMAGE);
+		className.set ("assets/images/tileset1.png", __ASSET__assets_images_tileset1_png);
+		type.set ("assets/images/tileset1.png", AssetType.IMAGE);
 		className.set ("assets/images/walkmc.png", __ASSET__assets_images_walkmc_png);
 		type.set ("assets/images/walkmc.png", AssetType.IMAGE);
 		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
@@ -151,6 +154,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.TEXT);
 		id = "assets/images/tiles.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/tileset1.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -238,6 +245,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/images/tiles.png", __ASSET__assets_images_tiles_png);
 		type.set ("assets/images/tiles.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/tileset1.png", __ASSET__assets_images_tileset1_png);
+		type.set ("assets/images/tileset1.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/walkmc.png", __ASSET__assets_images_walkmc_png);
 		type.set ("assets/images/walkmc.png", AssetType.IMAGE);
@@ -922,6 +932,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_data_walmart_tmx extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_images_go_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tiles_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_tileset1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_walkmc_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_music_music_goes_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_crowdambient_mp3 extends flash.media.Sound { }
@@ -935,6 +946,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
 
 
 
@@ -973,6 +985,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/data/walmart.tmx") #if display private #end class __ASSET__assets_data_walmart_tmx extends lime.utils.Bytes {}
 @:file("assets/images/images-go-here.txt") #if display private #end class __ASSET__assets_images_images_go_here_txt extends lime.utils.Bytes {}
 @:image("assets/images/tiles.png") #if display private #end class __ASSET__assets_images_tiles_png extends lime.graphics.Image {}
+@:image("assets/images/tileset1.png") #if display private #end class __ASSET__assets_images_tileset1_png extends lime.graphics.Image {}
 @:image("assets/images/walkmc.png") #if display private #end class __ASSET__assets_images_walkmc_png extends lime.graphics.Image {}
 @:file("assets/music/music-goes-here.txt") #if display private #end class __ASSET__assets_music_music_goes_here_txt extends lime.utils.Bytes {}
 @:file("assets/sounds/crowdAmbient.mp3") #if display private #end class __ASSET__assets_sounds_crowdambient_mp3 extends lime.utils.Bytes {}
