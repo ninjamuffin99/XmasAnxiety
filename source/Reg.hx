@@ -9,8 +9,12 @@ class Reg
 
 	public static var items:Array<String> = 
 	[
-		"Video Game",
-		"Bike", 
-		"Coffee Maker"
+		"appliance",
+		"video game",
+		"electronic",
+		"toy",
+		"food",
+		"clothing",
+		"sporting good"
 	];
 }

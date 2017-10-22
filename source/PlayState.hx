@@ -101,7 +101,7 @@ class PlayState extends FlxState
 		}
 		if (entityName == "pickups")
 		{
-			_grpPickupSpots.add(new PickupSpot(x, y));
+			_grpPickupSpots.add(new PickupSpot(x, y, _map.properties.get("itemType")));
 		}
 		else if (entityName == "npc")
 		{
