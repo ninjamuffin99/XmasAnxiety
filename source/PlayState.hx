@@ -210,6 +210,11 @@ class PlayState extends FlxState
 		
 		_player.anxiety -= 0.01;
 		
+		if (_player.anxiety >= 99)
+		{
+			FlxG.switchState(new MenuState());
+		}
+		
 		_anxietyText.text = "Anxiety: " + Math.floor(_player.anxiety);
 	}
 	
