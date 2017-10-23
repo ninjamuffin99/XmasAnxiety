@@ -78,6 +78,17 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -105,6 +116,28 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/walmart.tmx", AssetType.TEXT);
 		className.set ("assets/images/images-go-here.txt", __ASSET__assets_images_images_go_here_txt);
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
+		className.set ("assets/images/npc1.png", __ASSET__assets_images_npc1_png);
+		type.set ("assets/images/npc1.png", AssetType.IMAGE);
+		className.set ("assets/images/npc10.png", __ASSET__assets_images_npc10_png);
+		type.set ("assets/images/npc10.png", AssetType.IMAGE);
+		className.set ("assets/images/npc11.png", __ASSET__assets_images_npc11_png);
+		type.set ("assets/images/npc11.png", AssetType.IMAGE);
+		className.set ("assets/images/npc2.png", __ASSET__assets_images_npc2_png);
+		type.set ("assets/images/npc2.png", AssetType.IMAGE);
+		className.set ("assets/images/npc3.png", __ASSET__assets_images_npc3_png);
+		type.set ("assets/images/npc3.png", AssetType.IMAGE);
+		className.set ("assets/images/npc4.png", __ASSET__assets_images_npc4_png);
+		type.set ("assets/images/npc4.png", AssetType.IMAGE);
+		className.set ("assets/images/npc5.png", __ASSET__assets_images_npc5_png);
+		type.set ("assets/images/npc5.png", AssetType.IMAGE);
+		className.set ("assets/images/npc6.png", __ASSET__assets_images_npc6_png);
+		type.set ("assets/images/npc6.png", AssetType.IMAGE);
+		className.set ("assets/images/npc7.png", __ASSET__assets_images_npc7_png);
+		type.set ("assets/images/npc7.png", AssetType.IMAGE);
+		className.set ("assets/images/npc8.png", __ASSET__assets_images_npc8_png);
+		type.set ("assets/images/npc8.png", AssetType.IMAGE);
+		className.set ("assets/images/npc9.png", __ASSET__assets_images_npc9_png);
+		type.set ("assets/images/npc9.png", AssetType.IMAGE);
 		className.set ("assets/images/tiles.png", __ASSET__assets_images_tiles_png);
 		type.set ("assets/images/tiles.png", AssetType.IMAGE);
 		className.set ("assets/images/tileset1.png", __ASSET__assets_images_tileset1_png);
@@ -190,6 +223,50 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
+		id = "assets/images/npc1.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/npc10.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/npc11.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/npc2.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/npc3.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/npc4.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/npc5.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/npc6.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/npc7.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/npc8.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/npc9.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/tiles.png";
 		path.set (id, id);
 		
@@ -322,6 +399,39 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/images/images-go-here.txt", __ASSET__assets_images_images_go_here_txt);
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
+		
+		className.set ("assets/images/npc1.png", __ASSET__assets_images_npc1_png);
+		type.set ("assets/images/npc1.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/npc10.png", __ASSET__assets_images_npc10_png);
+		type.set ("assets/images/npc10.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/npc11.png", __ASSET__assets_images_npc11_png);
+		type.set ("assets/images/npc11.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/npc2.png", __ASSET__assets_images_npc2_png);
+		type.set ("assets/images/npc2.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/npc3.png", __ASSET__assets_images_npc3_png);
+		type.set ("assets/images/npc3.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/npc4.png", __ASSET__assets_images_npc4_png);
+		type.set ("assets/images/npc4.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/npc5.png", __ASSET__assets_images_npc5_png);
+		type.set ("assets/images/npc5.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/npc6.png", __ASSET__assets_images_npc6_png);
+		type.set ("assets/images/npc6.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/npc7.png", __ASSET__assets_images_npc7_png);
+		type.set ("assets/images/npc7.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/npc8.png", __ASSET__assets_images_npc8_png);
+		type.set ("assets/images/npc8.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/npc9.png", __ASSET__assets_images_npc9_png);
+		type.set ("assets/images/npc9.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/tiles.png", __ASSET__assets_images_tiles_png);
 		type.set ("assets/images/tiles.png", AssetType.IMAGE);
@@ -1042,6 +1152,17 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_data_walmart_oep extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_walmart_tmx extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_images_go_here_txt extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_npc1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_npc10_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_npc11_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_npc2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_npc3_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_npc4_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_npc5_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_npc6_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_npc7_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_npc8_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_npc9_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tiles_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tileset1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_walkmc_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -1095,6 +1216,17 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 @:keep #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font { public function new () { super (); name = "Nokia Cellphone FC Small"; } } 
 @:keep #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font { public function new () { super (); name = "Monsterrat"; } } 
 
@@ -1117,6 +1249,17 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/data/Walmart.oep") #if display private #end class __ASSET__assets_data_walmart_oep extends lime.utils.Bytes {}
 @:file("assets/data/walmart.tmx") #if display private #end class __ASSET__assets_data_walmart_tmx extends lime.utils.Bytes {}
 @:file("assets/images/images-go-here.txt") #if display private #end class __ASSET__assets_images_images_go_here_txt extends lime.utils.Bytes {}
+@:image("assets/images/npc1.png") #if display private #end class __ASSET__assets_images_npc1_png extends lime.graphics.Image {}
+@:image("assets/images/npc10.png") #if display private #end class __ASSET__assets_images_npc10_png extends lime.graphics.Image {}
+@:image("assets/images/npc11.png") #if display private #end class __ASSET__assets_images_npc11_png extends lime.graphics.Image {}
+@:image("assets/images/npc2.png") #if display private #end class __ASSET__assets_images_npc2_png extends lime.graphics.Image {}
+@:image("assets/images/npc3.png") #if display private #end class __ASSET__assets_images_npc3_png extends lime.graphics.Image {}
+@:image("assets/images/npc4.png") #if display private #end class __ASSET__assets_images_npc4_png extends lime.graphics.Image {}
+@:image("assets/images/npc5.png") #if display private #end class __ASSET__assets_images_npc5_png extends lime.graphics.Image {}
+@:image("assets/images/npc6.png") #if display private #end class __ASSET__assets_images_npc6_png extends lime.graphics.Image {}
+@:image("assets/images/npc7.png") #if display private #end class __ASSET__assets_images_npc7_png extends lime.graphics.Image {}
+@:image("assets/images/npc8.png") #if display private #end class __ASSET__assets_images_npc8_png extends lime.graphics.Image {}
+@:image("assets/images/npc9.png") #if display private #end class __ASSET__assets_images_npc9_png extends lime.graphics.Image {}
 @:image("assets/images/tiles.png") #if display private #end class __ASSET__assets_images_tiles_png extends lime.graphics.Image {}
 @:image("assets/images/tileset1.png") #if display private #end class __ASSET__assets_images_tileset1_png extends lime.graphics.Image {}
 @:image("assets/images/walkmc.png") #if display private #end class __ASSET__assets_images_walkmc_png extends lime.graphics.Image {}
