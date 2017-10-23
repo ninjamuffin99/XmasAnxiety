@@ -118,6 +118,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
+		urls.push ("assets/sounds/buttonHangUp.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
 		urls.push ("assets/sounds/crowdAmbient.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
@@ -211,11 +215,7 @@ class ApplicationMain {
 		
 		config = {
 			
-<<<<<<< HEAD
-			build: "178",
-=======
-			build: "171",
->>>>>>> 46e128a1c42a311da3551d7a354fb62cb0615bfd
+			build: "7",
 			company: "ninjaMuffin",
 			file: "XmasAnxiety",
 			fps: 60,
