@@ -211,7 +211,11 @@ class ApplicationMain {
 		
 		config = {
 			
+<<<<<<< HEAD
 			build: "178",
+=======
+			build: "171",
+>>>>>>> 46e128a1c42a311da3551d7a354fb62cb0615bfd
 			company: "ninjaMuffin",
 			file: "XmasAnxiety",
 			fps: 60,
