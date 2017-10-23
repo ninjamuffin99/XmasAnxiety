@@ -107,19 +107,31 @@ class PlayState extends FlxState
 		}
 		if (entityName == "pickupsAppliance")
 		{
-			_grpPickupSpots.add(new PickupSpot(x, y, 0));
+			_grpPickupSpots.add(new PickupSpot(x, y, "appliance"));
 		}
 		if (entityName == "pickupsVideoGame")
 		{
-			_grpPickupSpots.add(new PickupSpot(x, y, 1));
+			_grpPickupSpots.add(new PickupSpot(x, y, "video game"));
 		}
 		if (entityName == "pickupsElectronic")
 		{
-			_grpPickupSpots.add(new PickupSpot(x, y, 2));
+			_grpPickupSpots.add(new PickupSpot(x, y, "electronic"));
 		}
 		if (entityName == "pickupsToy")
 		{
-			_grpPickupSpots.add(new PickupSpot(x, y, 3));
+			_grpPickupSpots.add(new PickupSpot(x, y, "toy"));
+		}
+		if (entityName == "pickupsFood")
+		{
+			_grpPickupSpots.add(new PickupSpot(x, y, "food"));
+		}
+		if (entityName == "pickupsClothing")
+		{
+			_grpPickupSpots.add(new PickupSpot(x, y, "clothing"));
+		}
+		if (entityName == "pickupsSportingGood")
+		{
+			_grpPickupSpots.add(new PickupSpot(x, y, "clothing"));
 		}
 		
 		if (entityName == "pickups")
@@ -168,7 +180,9 @@ class PlayState extends FlxState
 		
 		_grpPickupSpots.forEachAlive(pickupItem);
 		
-		_anxietyText.text = "Anxiety: " + _player.anxiety;
+		_player.anxiety -= 0.01;
+		
+		_anxietyText.text = "Anxiety: " + Math.floor(_player.anxiety);
 	}
 	
 	private function controls():Void
@@ -213,8 +227,8 @@ class PlayState extends FlxState
 	{
 		if (FlxG.overlap(pickupSpot, _player) && FlxG.keys.justReleased.SPACE)
 		{
+			if (_list.remove(pickupSpot._itemType))
 			pickupSpot.kill();
-			_list.splice(FlxG.random.int(0, _list.length), 1);
 			_listText.text = Std.string(_list);
 		}
 	}

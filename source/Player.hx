@@ -36,12 +36,15 @@ class Player extends FlxSprite
 		offset.y = 48;
 		
 		drag.x = drag.y = 1000;
+		
+		
 	}
 	
 	override public function update(elapsed:Float):Void 
 	{
 		super.update(elapsed);
 		
+		anxiety = FlxMath.bound(anxiety, 0, 100);
 		controls();
 	}
 	

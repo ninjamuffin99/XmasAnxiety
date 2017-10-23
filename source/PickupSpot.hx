@@ -12,10 +12,12 @@ class PickupSpot extends FlxSprite
 {
 	public var _itemType:String;
 	
-	public function new(?X:Float=0, ?Y:Float=0, ?itemType:Int) 
+	public function new(?X:Float=0, ?Y:Float=0, ?itemType:String) 
 	{
 		super(X, Y);
 		makeGraphic(16, 16);
+		
+		_itemType = itemType;
 		
 		FlxG.log.add(itemType);
 	}
