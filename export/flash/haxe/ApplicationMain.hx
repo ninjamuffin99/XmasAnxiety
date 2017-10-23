@@ -78,7 +78,7 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
-		urls.push ("assets/music/music-goes-here.txt");
+		urls.push ("assets/music/music-goes-here - Copy.txt");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
@@ -175,7 +175,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "170",
+			build: "171",
 			company: "ninjaMuffin",
 			file: "XmasAnxiety",
 			fps: 60,
