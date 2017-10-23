@@ -118,6 +118,7 @@ class PlayState extends FlxState
 		if (entityName == "pickupsAppliance")
 		{
 			_grpPickupSpots.add(new PickupSpot(x, y, "appliance"));
+			_grpPickupSpots.forEachAlive();
 		}
 		if (entityName == "pickupsVideoGame")
 		{
@@ -260,9 +261,10 @@ class PlayState extends FlxState
 	{
 		if (FlxG.overlap(pickupSpot, _player) && FlxG.keys.justReleased.SPACE)
 		{
-			if (_list.remove(pickupSpot._itemType))
+			_list.remove(pickupSpot._itemType);
 			pickupSpot.kill();
 			_listText.text = Std.string(_list);
 		}
+		
 	}
 }
