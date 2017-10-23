@@ -118,7 +118,7 @@ class PlayState extends FlxState
 		if (entityName == "pickupsAppliance")
 		{
 			_grpPickupSpots.add(new PickupSpot(x, y, "appliance"));
-			_grpPickupSpots.forEachAlive();
+			
 		}
 		if (entityName == "pickupsVideoGame")
 		{
