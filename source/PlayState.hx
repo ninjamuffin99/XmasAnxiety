@@ -13,6 +13,7 @@ import flixel.group.FlxGroup;
 import flixel.group.FlxSpriteGroup;
 import flixel.input.FlxPointer;
 import flixel.math.FlxPoint;
+import flixel.system.FlxSound;
 import flixel.text.FlxText;
 import flixel.tile.FlxBaseTilemap.FlxTilemapAutoTiling;
 import flixel.tile.FlxTilemap;
@@ -42,6 +43,9 @@ class PlayState extends FlxState
 	
 	private var _timer:Float;
 	private var _timerText:FlxText;
+	
+	private var _music:FlxSound;
+	private var _playingPA:Bool = false;
 	
 	override public function create():Void
 	{
@@ -90,7 +94,12 @@ class PlayState extends FlxState
 		
 		createHUD();
 		
-		FlxG.sound.play(AssetPaths.crowdAmbient__mp3, 0.7, true);
+		FlxG.sound.play(AssetPaths.crowdAmbient__mp3, 0.5, true);
+		
+		_music = new FlxSound();
+		_music.loadEmbedded("assets/music/Wish BackgroundEdited.mp3", true, false);
+		add(_music);
+		_music.play();
 		
 		super.create();
 	}
@@ -170,6 +179,20 @@ class PlayState extends FlxState
 		
 		_timer -= FlxG.elapsed;
 		_timerText.text = "0:" + Std.string(Math.floor(FlxMath.remapToRange(_timer, 0, 600, 0, 60)) + " mins until closing!");
+		FlxG.watch.addQuick("timer realdeal", _timer);
+		
+		if (FlxMath.inBounds(_timer, 110, 110.5) && !_playingPA)
+		{
+			_music.fadeOut(2, 0.2);
+			FlxG.sound.play("assets/sounds/attention" + FlxG.random.int(1, 8) + ".mp3", 0.7, false, null, true, function()
+			{
+				_music.fadeIn(1, 0.2, 1);
+			});
+			_playingPA = true;
+		}
+		
+		if (FlxG.keys.justPressed.J)
+			_timer = 120;
 		
 		controls();
 		FlxG.collide(_player, _mWalls);

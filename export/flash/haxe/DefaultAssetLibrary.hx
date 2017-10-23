@@ -68,6 +68,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -101,8 +110,26 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/tileset1.png", AssetType.IMAGE);
 		className.set ("assets/images/walkmc.png", __ASSET__assets_images_walkmc_png);
 		type.set ("assets/images/walkmc.png", AssetType.IMAGE);
-		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
-		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
+		className.set ("assets/music/music-goes-here - Copy.txt", __ASSET__assets_music_music_goes_here___copy_txt);
+		type.set ("assets/music/music-goes-here - Copy.txt", AssetType.TEXT);
+		className.set ("assets/music/Wish BackgroundEdited.mp3", __ASSET__assets_music_wish_backgroundedited_mp3);
+		type.set ("assets/music/Wish BackgroundEdited.mp3", AssetType.MUSIC);
+		className.set ("assets/sounds/attention1.mp3", __ASSET__assets_sounds_attention1_mp3);
+		type.set ("assets/sounds/attention1.mp3", AssetType.MUSIC);
+		className.set ("assets/sounds/attention2.mp3", __ASSET__assets_sounds_attention2_mp3);
+		type.set ("assets/sounds/attention2.mp3", AssetType.MUSIC);
+		className.set ("assets/sounds/attention3.mp3", __ASSET__assets_sounds_attention3_mp3);
+		type.set ("assets/sounds/attention3.mp3", AssetType.MUSIC);
+		className.set ("assets/sounds/attention4.mp3", __ASSET__assets_sounds_attention4_mp3);
+		type.set ("assets/sounds/attention4.mp3", AssetType.MUSIC);
+		className.set ("assets/sounds/attention5.mp3", __ASSET__assets_sounds_attention5_mp3);
+		type.set ("assets/sounds/attention5.mp3", AssetType.MUSIC);
+		className.set ("assets/sounds/attention6.mp3", __ASSET__assets_sounds_attention6_mp3);
+		type.set ("assets/sounds/attention6.mp3", AssetType.MUSIC);
+		className.set ("assets/sounds/attention7.mp3", __ASSET__assets_sounds_attention7_mp3);
+		type.set ("assets/sounds/attention7.mp3", AssetType.MUSIC);
+		className.set ("assets/sounds/attention8.mp3", __ASSET__assets_sounds_attention8_mp3);
+		type.set ("assets/sounds/attention8.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/crowdAmbient.mp3", __ASSET__assets_sounds_crowdambient_mp3);
 		type.set ("assets/sounds/crowdAmbient.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/sounds-go-here.txt", __ASSET__assets_sounds_sounds_go_here_txt);
@@ -172,10 +199,46 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
-		id = "assets/music/music-goes-here.txt";
+		id = "assets/music/music-goes-here - Copy.txt";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
+		id = "assets/music/Wish BackgroundEdited.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/attention1.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/attention2.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/attention3.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/attention4.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/attention5.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/attention6.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/attention7.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/attention8.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/crowdAmbient.mp3";
 		path.set (id, id);
 		
@@ -262,8 +325,35 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/images/walkmc.png", __ASSET__assets_images_walkmc_png);
 		type.set ("assets/images/walkmc.png", AssetType.IMAGE);
 		
-		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
-		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
+		className.set ("assets/music/music-goes-here - Copy.txt", __ASSET__assets_music_music_goes_here___copy_txt);
+		type.set ("assets/music/music-goes-here - Copy.txt", AssetType.TEXT);
+		
+		className.set ("assets/music/Wish BackgroundEdited.mp3", __ASSET__assets_music_wish_backgroundedited_mp3);
+		type.set ("assets/music/Wish BackgroundEdited.mp3", AssetType.MUSIC);
+		
+		className.set ("assets/sounds/attention1.mp3", __ASSET__assets_sounds_attention1_mp3);
+		type.set ("assets/sounds/attention1.mp3", AssetType.MUSIC);
+		
+		className.set ("assets/sounds/attention2.mp3", __ASSET__assets_sounds_attention2_mp3);
+		type.set ("assets/sounds/attention2.mp3", AssetType.MUSIC);
+		
+		className.set ("assets/sounds/attention3.mp3", __ASSET__assets_sounds_attention3_mp3);
+		type.set ("assets/sounds/attention3.mp3", AssetType.MUSIC);
+		
+		className.set ("assets/sounds/attention4.mp3", __ASSET__assets_sounds_attention4_mp3);
+		type.set ("assets/sounds/attention4.mp3", AssetType.MUSIC);
+		
+		className.set ("assets/sounds/attention5.mp3", __ASSET__assets_sounds_attention5_mp3);
+		type.set ("assets/sounds/attention5.mp3", AssetType.MUSIC);
+		
+		className.set ("assets/sounds/attention6.mp3", __ASSET__assets_sounds_attention6_mp3);
+		type.set ("assets/sounds/attention6.mp3", AssetType.MUSIC);
+		
+		className.set ("assets/sounds/attention7.mp3", __ASSET__assets_sounds_attention7_mp3);
+		type.set ("assets/sounds/attention7.mp3", AssetType.MUSIC);
+		
+		className.set ("assets/sounds/attention8.mp3", __ASSET__assets_sounds_attention8_mp3);
+		type.set ("assets/sounds/attention8.mp3", AssetType.MUSIC);
 		
 		className.set ("assets/sounds/crowdAmbient.mp3", __ASSET__assets_sounds_crowdambient_mp3);
 		type.set ("assets/sounds/crowdAmbient.mp3", AssetType.MUSIC);
@@ -945,7 +1035,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_tiles_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tileset1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_walkmc_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind #if display private #end class __ASSET__assets_music_music_goes_here_txt extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_music_music_goes_here___copy_txt extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_music_wish_backgroundedited_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_attention1_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_attention2_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_attention3_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_attention4_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_attention5_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_attention6_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_attention7_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_attention8_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_crowdambient_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_mp3 extends flash.media.Sound { }
@@ -957,6 +1056,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1000,7 +1108,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/images/tiles.png") #if display private #end class __ASSET__assets_images_tiles_png extends lime.graphics.Image {}
 @:image("assets/images/tileset1.png") #if display private #end class __ASSET__assets_images_tileset1_png extends lime.graphics.Image {}
 @:image("assets/images/walkmc.png") #if display private #end class __ASSET__assets_images_walkmc_png extends lime.graphics.Image {}
-@:file("assets/music/music-goes-here.txt") #if display private #end class __ASSET__assets_music_music_goes_here_txt extends lime.utils.Bytes {}
+@:file("assets/music/music-goes-here - Copy.txt") #if display private #end class __ASSET__assets_music_music_goes_here___copy_txt extends lime.utils.Bytes {}
+@:file("assets/music/Wish BackgroundEdited.mp3") #if display private #end class __ASSET__assets_music_wish_backgroundedited_mp3 extends lime.utils.Bytes {}
+@:file("assets/sounds/attention1.mp3") #if display private #end class __ASSET__assets_sounds_attention1_mp3 extends lime.utils.Bytes {}
+@:file("assets/sounds/attention2.mp3") #if display private #end class __ASSET__assets_sounds_attention2_mp3 extends lime.utils.Bytes {}
+@:file("assets/sounds/attention3.mp3") #if display private #end class __ASSET__assets_sounds_attention3_mp3 extends lime.utils.Bytes {}
+@:file("assets/sounds/attention4.mp3") #if display private #end class __ASSET__assets_sounds_attention4_mp3 extends lime.utils.Bytes {}
+@:file("assets/sounds/attention5.mp3") #if display private #end class __ASSET__assets_sounds_attention5_mp3 extends lime.utils.Bytes {}
+@:file("assets/sounds/attention6.mp3") #if display private #end class __ASSET__assets_sounds_attention6_mp3 extends lime.utils.Bytes {}
+@:file("assets/sounds/attention7.mp3") #if display private #end class __ASSET__assets_sounds_attention7_mp3 extends lime.utils.Bytes {}
+@:file("assets/sounds/attention8.mp3") #if display private #end class __ASSET__assets_sounds_attention8_mp3 extends lime.utils.Bytes {}
 @:file("assets/sounds/crowdAmbient.mp3") #if display private #end class __ASSET__assets_sounds_crowdambient_mp3 extends lime.utils.Bytes {}
 @:file("assets/sounds/sounds-go-here.txt") #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends lime.utils.Bytes {}
 @:file("C:/HaxeToolkit/haxe/lib/flixel/4,3,0/assets/sounds/beep.mp3") #if display private #end class __ASSET__flixel_sounds_beep_mp3 extends lime.utils.Bytes {}
