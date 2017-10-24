@@ -61,7 +61,7 @@ class PlayState extends FlxState
 		add(_mFloors);
 		
 		_mWalls = new FlxTilemap();
-		_mWalls.loadMapFromArray(cast(_map.getLayer("walls"), TiledTileLayer).tileArray, _map.width, _map.height, AssetPaths.TilesOnly__png, _map.tileWidth, _map.tileHeight, FlxTilemapAutoTiling.OFF, 1, 1, 3);
+		_mWalls.loadMapFromArray(cast(_map.getLayer("Floors"), TiledTileLayer).tileArray, _map.width, _map.height, AssetPaths.TilesOnly__png, _map.tileWidth, _map.tileHeight, FlxTilemapAutoTiling.OFF, 1, 1, 3);
 		add(_mWalls);
 		
 		
