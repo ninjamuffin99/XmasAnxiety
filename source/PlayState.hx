@@ -31,6 +31,7 @@ class PlayState extends FlxState
 	
 	private var _map:TiledMap;
 	public var _mWalls:FlxTilemap;
+	public var _mFloors:FlxTilemap;
 	
 	private var _camZoom:Float = 0.7;
 	
@@ -54,12 +55,20 @@ class PlayState extends FlxState
 		add(_cameraFocus);
 		
 		_map = new TiledMap(AssetPaths.walmart__tmx);
+		
+		_mFloors = new FlxTilemap();
+		_mFloors.loadMapFromArray(cast(_map.getLayer("Floors"), TiledTileLayer).tileArray, _map.width, _map.height, AssetPaths.TilesOnly__png, _map.tileWidth, _map.tileHeight, FlxTilemapAutoTiling.OFF, 1, 1, 3);
+		_mFloors.setTileProperties(2, FlxObject.NONE);
+		add(_mWalls);
+		
 		_mWalls = new FlxTilemap();
-		_mWalls.loadMapFromArray(cast(_map.getLayer("walls"), TiledTileLayer).tileArray, _map.width, _map.height, AssetPaths.tiles__png, _map.tileWidth, _map.tileHeight, FlxTilemapAutoTiling.OFF, 1, 1, 3);
+		_mWalls.loadMapFromArray(cast(_map.getLayer("walls"), TiledTileLayer).tileArray, _map.width, _map.height, AssetPaths.TilesOnly__png, _map.tileWidth, _map.tileHeight, FlxTilemapAutoTiling.OFF, 1, 1, 3);
 		_mWalls.follow();
 		_mWalls.setTileProperties(2, FlxObject.NONE);
 		_mWalls.setTileProperties(3, FlxObject.ANY);
 		add(_mWalls);
+		
+		
 		
 		_player = new Player();
 		add(_player);

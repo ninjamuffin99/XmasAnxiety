@@ -89,6 +89,25 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -108,14 +127,38 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/roughTiles.tsx", AssetType.TEXT);
 		className.set ("assets/data/run debug.txt", __ASSET__assets_data_run_debug_txt);
 		type.set ("assets/data/run debug.txt", AssetType.TEXT);
+		className.set ("assets/data/tilesetWalmart.tsx", __ASSET__assets_data_tilesetwalmart_tsx);
+		type.set ("assets/data/tilesetWalmart.tsx", AssetType.TEXT);
+		className.set ("assets/data/TilesWalmartOnly.tsx", __ASSET__assets_data_tileswalmartonly_tsx);
+		type.set ("assets/data/TilesWalmartOnly.tsx", AssetType.TEXT);
+		className.set ("assets/data/tillesBetter.tsx", __ASSET__assets_data_tillesbetter_tsx);
+		type.set ("assets/data/tillesBetter.tsx", AssetType.TEXT);
+		className.set ("assets/data/untitled.tsx", __ASSET__assets_data_untitled_tsx);
+		type.set ("assets/data/untitled.tsx", AssetType.TEXT);
 		className.set ("assets/data/Walmart.oel", __ASSET__assets_data_walmart_oel);
 		type.set ("assets/data/Walmart.oel", AssetType.TEXT);
 		className.set ("assets/data/Walmart.oep", __ASSET__assets_data_walmart_oep);
 		type.set ("assets/data/Walmart.oep", AssetType.TEXT);
 		className.set ("assets/data/walmart.tmx", __ASSET__assets_data_walmart_tmx);
 		type.set ("assets/data/walmart.tmx", AssetType.TEXT);
+		className.set ("assets/images/CheckOut.ase", __ASSET__assets_images_checkout_ase);
+		type.set ("assets/images/CheckOut.ase", AssetType.BINARY);
+		className.set ("assets/images/CheckOut.png", __ASSET__assets_images_checkout_png);
+		type.set ("assets/images/CheckOut.png", AssetType.IMAGE);
+		className.set ("assets/images/extras1.png", __ASSET__assets_images_extras1_png);
+		type.set ("assets/images/extras1.png", AssetType.IMAGE);
+		className.set ("assets/images/frontShelf.ase", __ASSET__assets_images_frontshelf_ase);
+		type.set ("assets/images/frontShelf.ase", AssetType.BINARY);
 		className.set ("assets/images/images-go-here.txt", __ASSET__assets_images_images_go_here_txt);
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
+		className.set ("assets/images/LongShelvesSide.ase", __ASSET__assets_images_longshelvesside_ase);
+		type.set ("assets/images/LongShelvesSide.ase", AssetType.BINARY);
+		className.set ("assets/images/LongShelvesSide.png", __ASSET__assets_images_longshelvesside_png);
+		type.set ("assets/images/LongShelvesSide.png", AssetType.IMAGE);
+		className.set ("assets/images/McDonaldssss.ase", __ASSET__assets_images_mcdonaldssss_ase);
+		type.set ("assets/images/McDonaldssss.ase", AssetType.BINARY);
+		className.set ("assets/images/McDonaldssss.png", __ASSET__assets_images_mcdonaldssss_png);
+		type.set ("assets/images/McDonaldssss.png", AssetType.IMAGE);
 		className.set ("assets/images/npc1.png", __ASSET__assets_images_npc1_png);
 		type.set ("assets/images/npc1.png", AssetType.IMAGE);
 		className.set ("assets/images/npc10.png", __ASSET__assets_images_npc10_png);
@@ -138,10 +181,24 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/npc8.png", AssetType.IMAGE);
 		className.set ("assets/images/npc9.png", __ASSET__assets_images_npc9_png);
 		type.set ("assets/images/npc9.png", AssetType.IMAGE);
+		className.set ("assets/images/shelvesOpen.ase", __ASSET__assets_images_shelvesopen_ase);
+		type.set ("assets/images/shelvesOpen.ase", AssetType.BINARY);
+		className.set ("assets/images/shelvesOpen.png", __ASSET__assets_images_shelvesopen_png);
+		type.set ("assets/images/shelvesOpen.png", AssetType.IMAGE);
+		className.set ("assets/images/SideShelves.ase", __ASSET__assets_images_sideshelves_ase);
+		type.set ("assets/images/SideShelves.ase", AssetType.BINARY);
+		className.set ("assets/images/SideShelveSmall.png", __ASSET__assets_images_sideshelvesmall_png);
+		type.set ("assets/images/SideShelveSmall.png", AssetType.IMAGE);
 		className.set ("assets/images/tiles.png", __ASSET__assets_images_tiles_png);
 		type.set ("assets/images/tiles.png", AssetType.IMAGE);
 		className.set ("assets/images/tileset1.png", __ASSET__assets_images_tileset1_png);
 		type.set ("assets/images/tileset1.png", AssetType.IMAGE);
+		className.set ("assets/images/tileset1resized.png", __ASSET__assets_images_tileset1resized_png);
+		type.set ("assets/images/tileset1resized.png", AssetType.IMAGE);
+		className.set ("assets/images/TilesOnly.ase", __ASSET__assets_images_tilesonly_ase);
+		type.set ("assets/images/TilesOnly.ase", AssetType.BINARY);
+		className.set ("assets/images/TilesOnly.png", __ASSET__assets_images_tilesonly_png);
+		type.set ("assets/images/TilesOnly.png", AssetType.IMAGE);
 		className.set ("assets/images/walkmc.png", __ASSET__assets_images_walkmc_png);
 		type.set ("assets/images/walkmc.png", AssetType.IMAGE);
 		className.set ("assets/music/music-goes-here - Copy.txt", __ASSET__assets_music_music_goes_here___copy_txt);
@@ -207,6 +264,22 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
+		id = "assets/data/tilesetWalmart.tsx";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/TilesWalmartOnly.tsx";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/tillesBetter.tsx";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/untitled.tsx";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
 		id = "assets/data/Walmart.oel";
 		path.set (id, id);
 		
@@ -219,10 +292,42 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
+		id = "assets/images/CheckOut.ase";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/CheckOut.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/extras1.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/frontShelf.ase";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/images-go-here.txt";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
+		id = "assets/images/LongShelvesSide.ase";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/LongShelvesSide.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/McDonaldssss.ase";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/McDonaldssss.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/npc1.png";
 		path.set (id, id);
 		
@@ -267,11 +372,39 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/shelvesOpen.ase";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/shelvesOpen.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/SideShelves.ase";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/SideShelveSmall.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/tiles.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/tileset1.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/tileset1resized.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/TilesOnly.ase";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/TilesOnly.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -388,6 +521,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/data/run debug.txt", __ASSET__assets_data_run_debug_txt);
 		type.set ("assets/data/run debug.txt", AssetType.TEXT);
 		
+		className.set ("assets/data/tilesetWalmart.tsx", __ASSET__assets_data_tilesetwalmart_tsx);
+		type.set ("assets/data/tilesetWalmart.tsx", AssetType.TEXT);
+		
+		className.set ("assets/data/TilesWalmartOnly.tsx", __ASSET__assets_data_tileswalmartonly_tsx);
+		type.set ("assets/data/TilesWalmartOnly.tsx", AssetType.TEXT);
+		
+		className.set ("assets/data/tillesBetter.tsx", __ASSET__assets_data_tillesbetter_tsx);
+		type.set ("assets/data/tillesBetter.tsx", AssetType.TEXT);
+		
+		className.set ("assets/data/untitled.tsx", __ASSET__assets_data_untitled_tsx);
+		type.set ("assets/data/untitled.tsx", AssetType.TEXT);
+		
 		className.set ("assets/data/Walmart.oel", __ASSET__assets_data_walmart_oel);
 		type.set ("assets/data/Walmart.oel", AssetType.TEXT);
 		
@@ -397,8 +542,32 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/data/walmart.tmx", __ASSET__assets_data_walmart_tmx);
 		type.set ("assets/data/walmart.tmx", AssetType.TEXT);
 		
+		className.set ("assets/images/CheckOut.ase", __ASSET__assets_images_checkout_ase);
+		type.set ("assets/images/CheckOut.ase", AssetType.BINARY);
+		
+		className.set ("assets/images/CheckOut.png", __ASSET__assets_images_checkout_png);
+		type.set ("assets/images/CheckOut.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/extras1.png", __ASSET__assets_images_extras1_png);
+		type.set ("assets/images/extras1.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/frontShelf.ase", __ASSET__assets_images_frontshelf_ase);
+		type.set ("assets/images/frontShelf.ase", AssetType.BINARY);
+		
 		className.set ("assets/images/images-go-here.txt", __ASSET__assets_images_images_go_here_txt);
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
+		
+		className.set ("assets/images/LongShelvesSide.ase", __ASSET__assets_images_longshelvesside_ase);
+		type.set ("assets/images/LongShelvesSide.ase", AssetType.BINARY);
+		
+		className.set ("assets/images/LongShelvesSide.png", __ASSET__assets_images_longshelvesside_png);
+		type.set ("assets/images/LongShelvesSide.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/McDonaldssss.ase", __ASSET__assets_images_mcdonaldssss_ase);
+		type.set ("assets/images/McDonaldssss.ase", AssetType.BINARY);
+		
+		className.set ("assets/images/McDonaldssss.png", __ASSET__assets_images_mcdonaldssss_png);
+		type.set ("assets/images/McDonaldssss.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/npc1.png", __ASSET__assets_images_npc1_png);
 		type.set ("assets/images/npc1.png", AssetType.IMAGE);
@@ -433,11 +602,32 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/images/npc9.png", __ASSET__assets_images_npc9_png);
 		type.set ("assets/images/npc9.png", AssetType.IMAGE);
 		
+		className.set ("assets/images/shelvesOpen.ase", __ASSET__assets_images_shelvesopen_ase);
+		type.set ("assets/images/shelvesOpen.ase", AssetType.BINARY);
+		
+		className.set ("assets/images/shelvesOpen.png", __ASSET__assets_images_shelvesopen_png);
+		type.set ("assets/images/shelvesOpen.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/SideShelves.ase", __ASSET__assets_images_sideshelves_ase);
+		type.set ("assets/images/SideShelves.ase", AssetType.BINARY);
+		
+		className.set ("assets/images/SideShelveSmall.png", __ASSET__assets_images_sideshelvesmall_png);
+		type.set ("assets/images/SideShelveSmall.png", AssetType.IMAGE);
+		
 		className.set ("assets/images/tiles.png", __ASSET__assets_images_tiles_png);
 		type.set ("assets/images/tiles.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/tileset1.png", __ASSET__assets_images_tileset1_png);
 		type.set ("assets/images/tileset1.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/tileset1resized.png", __ASSET__assets_images_tileset1resized_png);
+		type.set ("assets/images/tileset1resized.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/TilesOnly.ase", __ASSET__assets_images_tilesonly_ase);
+		type.set ("assets/images/TilesOnly.ase", AssetType.BINARY);
+		
+		className.set ("assets/images/TilesOnly.png", __ASSET__assets_images_tilesonly_png);
+		type.set ("assets/images/TilesOnly.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/walkmc.png", __ASSET__assets_images_walkmc_png);
 		type.set ("assets/images/walkmc.png", AssetType.IMAGE);
@@ -1148,10 +1338,22 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_data_player_tsx extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_roughtiles_tsx extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_run_debug_txt extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_tilesetwalmart_tsx extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_tileswalmartonly_tsx extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_tillesbetter_tsx extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_untitled_tsx extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_walmart_oel extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_walmart_oep extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_walmart_tmx extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_checkout_ase extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_checkout_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_extras1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_frontshelf_ase extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_images_go_here_txt extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_longshelvesside_ase extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_longshelvesside_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_mcdonaldssss_ase extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_mcdonaldssss_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_npc1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_npc10_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_npc11_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -1163,8 +1365,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_npc7_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_npc8_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_npc9_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_shelvesopen_ase extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_shelvesopen_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_sideshelves_ase extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_sideshelvesmall_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tiles_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tileset1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_tileset1resized_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_tilesonly_ase extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_tilesonly_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_walkmc_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_music_music_goes_here___copy_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_music_wish_backgroundedited_mp3 extends flash.media.Sound { }
@@ -1227,6 +1436,25 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @:keep #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font { public function new () { super (); name = "Nokia Cellphone FC Small"; } } 
 @:keep #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font { public function new () { super (); name = "Monsterrat"; } } 
 
@@ -1245,10 +1473,22 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/data/player.tsx") #if display private #end class __ASSET__assets_data_player_tsx extends lime.utils.Bytes {}
 @:file("assets/data/roughTiles.tsx") #if display private #end class __ASSET__assets_data_roughtiles_tsx extends lime.utils.Bytes {}
 @:file("assets/data/run debug.txt") #if display private #end class __ASSET__assets_data_run_debug_txt extends lime.utils.Bytes {}
+@:file("assets/data/tilesetWalmart.tsx") #if display private #end class __ASSET__assets_data_tilesetwalmart_tsx extends lime.utils.Bytes {}
+@:file("assets/data/TilesWalmartOnly.tsx") #if display private #end class __ASSET__assets_data_tileswalmartonly_tsx extends lime.utils.Bytes {}
+@:file("assets/data/tillesBetter.tsx") #if display private #end class __ASSET__assets_data_tillesbetter_tsx extends lime.utils.Bytes {}
+@:file("assets/data/untitled.tsx") #if display private #end class __ASSET__assets_data_untitled_tsx extends lime.utils.Bytes {}
 @:file("assets/data/Walmart.oel") #if display private #end class __ASSET__assets_data_walmart_oel extends lime.utils.Bytes {}
 @:file("assets/data/Walmart.oep") #if display private #end class __ASSET__assets_data_walmart_oep extends lime.utils.Bytes {}
 @:file("assets/data/walmart.tmx") #if display private #end class __ASSET__assets_data_walmart_tmx extends lime.utils.Bytes {}
+@:file("assets/images/CheckOut.ase") #if display private #end class __ASSET__assets_images_checkout_ase extends lime.utils.Bytes {}
+@:image("assets/images/CheckOut.png") #if display private #end class __ASSET__assets_images_checkout_png extends lime.graphics.Image {}
+@:image("assets/images/extras1.png") #if display private #end class __ASSET__assets_images_extras1_png extends lime.graphics.Image {}
+@:file("assets/images/frontShelf.ase") #if display private #end class __ASSET__assets_images_frontshelf_ase extends lime.utils.Bytes {}
 @:file("assets/images/images-go-here.txt") #if display private #end class __ASSET__assets_images_images_go_here_txt extends lime.utils.Bytes {}
+@:file("assets/images/LongShelvesSide.ase") #if display private #end class __ASSET__assets_images_longshelvesside_ase extends lime.utils.Bytes {}
+@:image("assets/images/LongShelvesSide.png") #if display private #end class __ASSET__assets_images_longshelvesside_png extends lime.graphics.Image {}
+@:file("assets/images/McDonaldssss.ase") #if display private #end class __ASSET__assets_images_mcdonaldssss_ase extends lime.utils.Bytes {}
+@:image("assets/images/McDonaldssss.png") #if display private #end class __ASSET__assets_images_mcdonaldssss_png extends lime.graphics.Image {}
 @:image("assets/images/npc1.png") #if display private #end class __ASSET__assets_images_npc1_png extends lime.graphics.Image {}
 @:image("assets/images/npc10.png") #if display private #end class __ASSET__assets_images_npc10_png extends lime.graphics.Image {}
 @:image("assets/images/npc11.png") #if display private #end class __ASSET__assets_images_npc11_png extends lime.graphics.Image {}
@@ -1260,8 +1500,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/images/npc7.png") #if display private #end class __ASSET__assets_images_npc7_png extends lime.graphics.Image {}
 @:image("assets/images/npc8.png") #if display private #end class __ASSET__assets_images_npc8_png extends lime.graphics.Image {}
 @:image("assets/images/npc9.png") #if display private #end class __ASSET__assets_images_npc9_png extends lime.graphics.Image {}
+@:file("assets/images/shelvesOpen.ase") #if display private #end class __ASSET__assets_images_shelvesopen_ase extends lime.utils.Bytes {}
+@:image("assets/images/shelvesOpen.png") #if display private #end class __ASSET__assets_images_shelvesopen_png extends lime.graphics.Image {}
+@:file("assets/images/SideShelves.ase") #if display private #end class __ASSET__assets_images_sideshelves_ase extends lime.utils.Bytes {}
+@:image("assets/images/SideShelveSmall.png") #if display private #end class __ASSET__assets_images_sideshelvesmall_png extends lime.graphics.Image {}
 @:image("assets/images/tiles.png") #if display private #end class __ASSET__assets_images_tiles_png extends lime.graphics.Image {}
 @:image("assets/images/tileset1.png") #if display private #end class __ASSET__assets_images_tileset1_png extends lime.graphics.Image {}
+@:image("assets/images/tileset1resized.png") #if display private #end class __ASSET__assets_images_tileset1resized_png extends lime.graphics.Image {}
+@:file("assets/images/TilesOnly.ase") #if display private #end class __ASSET__assets_images_tilesonly_ase extends lime.utils.Bytes {}
+@:image("assets/images/TilesOnly.png") #if display private #end class __ASSET__assets_images_tilesonly_png extends lime.graphics.Image {}
 @:image("assets/images/walkmc.png") #if display private #end class __ASSET__assets_images_walkmc_png extends lime.graphics.Image {}
 @:file("assets/music/music-goes-here - Copy.txt") #if display private #end class __ASSET__assets_music_music_goes_here___copy_txt extends lime.utils.Bytes {}
 @:file("assets/music/Wish BackgroundEdited.mp3") #if display private #end class __ASSET__assets_music_wish_backgroundedited_mp3 extends lime.utils.Bytes {}
