@@ -57,15 +57,11 @@ class PlayState extends FlxState
 		_map = new TiledMap(AssetPaths.walmart__tmx);
 		
 		_mFloors = new FlxTilemap();
-		_mFloors.loadMapFromArray(cast(_map.getLayer("Floors"), TiledTileLayer).tileArray, _map.width, _map.height, AssetPaths.TilesOnly__png, _map.tileWidth, _map.tileHeight, FlxTilemapAutoTiling.OFF, 0, 1, 3);
-		_mFloors.setTileProperties(2, FlxObject.NONE);
+		_mFloors.loadMapFromArray(cast(_map.getLayer("Floors"), TiledTileLayer).tileArray, _map.width, _map.height, AssetPaths.TilesOnly__png, _map.tileWidth, _map.tileHeight, FlxTilemapAutoTiling.OFF, 1, 1, 3);
 		add(_mFloors);
 		
 		_mWalls = new FlxTilemap();
-		_mWalls.loadMapFromArray(cast(_map.getLayer("walls"), TiledTileLayer).tileArray, _map.width, _map.height, AssetPaths.TilesOnly__png, _map.tileWidth, _map.tileHeight, FlxTilemapAutoTiling.OFF, 0, 1, 3);
-		_mWalls.follow();
-		_mWalls.setTileProperties(2, FlxObject.NONE);
-		_mWalls.setTileProperties(3, FlxObject.ANY);
+		_mWalls.loadMapFromArray(cast(_map.getLayer("walls"), TiledTileLayer).tileArray, _map.width, _map.height, AssetPaths.TilesOnly__png, _map.tileWidth, _map.tileHeight, FlxTilemapAutoTiling.OFF, 1, 1, 3);
 		add(_mWalls);
 		
 		
@@ -153,14 +149,9 @@ class PlayState extends FlxState
 		{
 			_grpPickupSpots.add(new PickupSpot(x, y, "clothing"));
 		}
-		
-		if (entityName == "pickups")
+		else if (entityName == "pickups")
 		{
 			_grpPickupSpots.add(new PickupSpot(x, y));
-		}
-		else if (entityName == "npc")
-		{
-			_grpNPCs.add(new NPC(x, y));
 		}
 	}
 	
