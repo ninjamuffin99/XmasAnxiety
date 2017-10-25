@@ -13,6 +13,7 @@ import flixel.addons.editors.tiled.TiledObjectLayer;
 import flixel.addons.editors.tiled.TiledTileLayer;
 import flixel.addons.editors.tiled.TiledTilePropertySet;
 import flixel.addons.editors.tiled.TiledTileSet;
+import flixel.addons.tile.FlxTileSpecial;
 import flixel.addons.tile.FlxTilemapExt;
 import flixel.group.FlxGroup;
 import flixel.tile.FlxTilemap;
@@ -30,7 +31,7 @@ class TiledLevel extends TiledMap
 	public var foregroundTiles:FlxGroup;
 	public var objectLayer:FlxGroup;
 	public var backgroundLayer:FlxGroup;
-	private var collidableTIleLayers:Array<FlxTilemap>;
+	private var collidableTileLayers:Array<FlxTilemap>;
 	
 	public var imagesLayer:FlxGroup;
 
@@ -97,7 +98,28 @@ class TiledLevel extends TiledMap
 				]);
 			}
 			
+			if (tileLayer.properties.contains("nocollide"))
+			{
+				backgroundLayer.add(tilemap);
+			}
+			else
+			{
+				if (collidableTileLayers == null)
+					collidableTileLayers = new Array<FlxTilemap>();
+				foregroundTiles.add(tilemap);
+				collidableTileLayers.push(tilemap);
+			}
+			
 		}
+	}
+	
+	private function getAnimatedTile(props:TiledTilePropertySet, tileset:TiledTileSet):FlxTileSpecial
+	{
+		var special = new FlxTileSpecial(1, false, false, 0);
+		var n:Int = props.animationFrames.length;
+		var offset = Std.random(n);
+		special.addAnimation([for (i in 0...n) props.animationFrames[(i + offset) % n].tileID + tileset.firstGID], (1000 / props.animationFrames[0].duration));
+		return special;
 	}
 	
 	public function loadObjects(state:PlayState)
@@ -205,6 +227,20 @@ class TiledLevel extends TiledMap
 			var sprite = new FlxSprite(image.x, image.y, c_PATH_LEVEL_TILESHEETS + image.imagePath);
 			imagesLayer.add(sprite);
 		}
+	}
+	
+	public function collideWithLevel(obj:FlxObject, ?notifyCallback:FlxObject->FlxObject->Void, ?processCallback:FlxObject->FlxObject->Bool):Bool
+	{
+		if (collidableTileLayers == null)
+			return false;
+		for (map in collidableTileLayers)
+		{
+			if (FlxG.overlap(map, obj, notifyCallback, processCallback != null ? processCallback : FlxObject.separate))
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 	
 }
