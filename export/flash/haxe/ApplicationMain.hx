@@ -50,6 +50,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/data/TilesWalmartV1.tsx");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
 		urls.push ("assets/data/walmart.tmx");
 		types.push (lime.Assets.AssetType.TEXT);
 		
@@ -311,7 +315,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "53",
+			build: "61",
 			company: "ninjaMuffin",
 			file: "XmasAnxiety",
 			fps: 60,

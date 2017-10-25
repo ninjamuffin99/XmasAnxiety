@@ -102,6 +102,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -121,6 +122,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/TilesOnly.png", AssetType.IMAGE);
 		className.set ("assets/data/TilesWalmartOnly.tsx", __ASSET__assets_data_tileswalmartonly_tsx);
 		type.set ("assets/data/TilesWalmartOnly.tsx", AssetType.TEXT);
+		className.set ("assets/data/TilesWalmartV1.tsx", __ASSET__assets_data_tileswalmartv1_tsx);
+		type.set ("assets/data/TilesWalmartV1.tsx", AssetType.TEXT);
 		className.set ("assets/data/walmart.tmx", __ASSET__assets_data_walmart_tmx);
 		type.set ("assets/data/walmart.tmx", AssetType.TEXT);
 		className.set ("assets/data/walmartReal.tmx", __ASSET__assets_data_walmartreal_tmx);
@@ -243,6 +246,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.IMAGE);
 		id = "assets/data/TilesWalmartOnly.tsx";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/TilesWalmartV1.tsx";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -478,6 +485,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/data/TilesWalmartOnly.tsx", __ASSET__assets_data_tileswalmartonly_tsx);
 		type.set ("assets/data/TilesWalmartOnly.tsx", AssetType.TEXT);
+		
+		className.set ("assets/data/TilesWalmartV1.tsx", __ASSET__assets_data_tileswalmartv1_tsx);
+		type.set ("assets/data/TilesWalmartV1.tsx", AssetType.TEXT);
 		
 		className.set ("assets/data/walmart.tmx", __ASSET__assets_data_walmart_tmx);
 		type.set ("assets/data/walmart.tmx", AssetType.TEXT);
@@ -1278,6 +1288,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_data_run_debug_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_tilesonly_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_data_tileswalmartonly_tsx extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_tileswalmartv1_tsx extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_walmart_tmx extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_walmartreal_tmx extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_checkout_ase extends flash.utils.ByteArray { }
@@ -1383,6 +1394,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
 @:keep #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font { public function new () { super (); name = "Nokia Cellphone FC Small"; } } 
 @:keep #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font { public function new () { super (); name = "Monsterrat"; } } 
 
@@ -1401,6 +1413,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/data/run debug.txt") #if display private #end class __ASSET__assets_data_run_debug_txt extends lime.utils.Bytes {}
 @:image("assets/data/TilesOnly.png") #if display private #end class __ASSET__assets_data_tilesonly_png extends lime.graphics.Image {}
 @:file("assets/data/TilesWalmartOnly.tsx") #if display private #end class __ASSET__assets_data_tileswalmartonly_tsx extends lime.utils.Bytes {}
+@:file("assets/data/TilesWalmartV1.tsx") #if display private #end class __ASSET__assets_data_tileswalmartv1_tsx extends lime.utils.Bytes {}
 @:file("assets/data/walmart.tmx") #if display private #end class __ASSET__assets_data_walmart_tmx extends lime.utils.Bytes {}
 @:file("assets/data/walmartReal.tmx") #if display private #end class __ASSET__assets_data_walmartreal_tmx extends lime.utils.Bytes {}
 @:file("assets/images/CheckOut.ase") #if display private #end class __ASSET__assets_images_checkout_ase extends lime.utils.Bytes {}

@@ -54,9 +54,9 @@ class PlayState extends FlxState
 		_cameraFocus = new FlxSprite();
 		_cameraFocus.makeGraphic(1, 1);
 		add(_cameraFocus);
-		
+		FlxG.log.add("playstate chaekced");
 		_map = new TiledLevel("assets/data/walmartReal.tmx", this);
-		
+		FlxG.log.add("after map loaded");
 		add(_map.backgroundLayer);
 		
 		add (_map.imagesLayer);

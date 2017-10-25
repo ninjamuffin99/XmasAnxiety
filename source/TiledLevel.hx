@@ -40,6 +40,8 @@ class TiledLevel extends TiledMap
 	{
 		super(tiledLevel);
 		
+		FlxG.log.add("CheckPoint1");
+		
 		imagesLayer = new FlxGroup();
 		foregroundTiles = new FlxGroup();
 		objectsLayer = new FlxGroup();
@@ -49,13 +51,13 @@ class TiledLevel extends TiledMap
 		
 		loadImages();
 		loadObjects(state);
-		
+		FlxG.log.add("CheckPoint2");
 		// Load Tile Maps
 		for (layer in layers)
 		{
 			if (layer.type != TiledLayerType.TILE) continue;
 			var tileLayer:TiledTileLayer = cast layer;
-			
+			FlxG.log.add("CheckPoint3");
 			var tileSheetName:String = tileLayer.properties.get("tileset");
 			
 			if (tileSheetName == null)
@@ -70,6 +72,7 @@ class TiledLevel extends TiledMap
 					break;
 				}
 			}
+			FlxG.log.add("CheckPoint4");
 			
 			if (tileSet == null)
 				throw "Tileset '" + tileSheetName + " not found. Did you misspell the 'tilesheet' property in " + tileLayer.name + "' layer?";
@@ -82,6 +85,7 @@ class TiledLevel extends TiledMap
 			tilemap.loadMapFromArray(tileLayer.tileArray, width, height, processedPath,
 				tileSet.tileWidth, tileSet.tileHeight, OFF, tileSet.firstGID, 1, 1);
 			
+			FlxG.log.add("CheckPoint5");
 			if (tileLayer.properties.contains("animated"))
 			{
 				var tileset = tilesets["level"];
@@ -103,6 +107,7 @@ class TiledLevel extends TiledMap
 			}
 			
 			
+			
 			if (tileLayer.properties.contains("nocollide"))
 			{
 				backgroundLayer.add(tilemap);
@@ -116,6 +121,7 @@ class TiledLevel extends TiledMap
 				collidableTileLayers.push(tilemap);
 			}
 		}
+		FlxG.log.add("CheckPointFinal?");
 	}
 
 	private function getAnimatedTile(props:TiledTilePropertySet, tileset:TiledTileSet):FlxTileSpecial
