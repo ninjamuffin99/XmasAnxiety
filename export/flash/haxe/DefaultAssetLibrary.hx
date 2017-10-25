@@ -101,13 +101,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -119,26 +112,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
 		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
-		className.set ("assets/data/placeHolder.tsx", __ASSET__assets_data_placeholder_tsx);
-		type.set ("assets/data/placeHolder.tsx", AssetType.TEXT);
 		className.set ("assets/data/player.tsx", __ASSET__assets_data_player_tsx);
 		type.set ("assets/data/player.tsx", AssetType.TEXT);
-		className.set ("assets/data/roughTiles.tsx", __ASSET__assets_data_roughtiles_tsx);
-		type.set ("assets/data/roughTiles.tsx", AssetType.TEXT);
 		className.set ("assets/data/run debug.txt", __ASSET__assets_data_run_debug_txt);
 		type.set ("assets/data/run debug.txt", AssetType.TEXT);
-		className.set ("assets/data/tilesetWalmart.tsx", __ASSET__assets_data_tilesetwalmart_tsx);
-		type.set ("assets/data/tilesetWalmart.tsx", AssetType.TEXT);
 		className.set ("assets/data/TilesWalmartOnly.tsx", __ASSET__assets_data_tileswalmartonly_tsx);
 		type.set ("assets/data/TilesWalmartOnly.tsx", AssetType.TEXT);
-		className.set ("assets/data/tillesBetter.tsx", __ASSET__assets_data_tillesbetter_tsx);
-		type.set ("assets/data/tillesBetter.tsx", AssetType.TEXT);
-		className.set ("assets/data/untitled.tsx", __ASSET__assets_data_untitled_tsx);
-		type.set ("assets/data/untitled.tsx", AssetType.TEXT);
-		className.set ("assets/data/Walmart.oel", __ASSET__assets_data_walmart_oel);
-		type.set ("assets/data/Walmart.oel", AssetType.TEXT);
-		className.set ("assets/data/Walmart.oep", __ASSET__assets_data_walmart_oep);
-		type.set ("assets/data/Walmart.oep", AssetType.TEXT);
 		className.set ("assets/data/walmart.tmx", __ASSET__assets_data_walmart_tmx);
 		type.set ("assets/data/walmart.tmx", AssetType.TEXT);
 		className.set ("assets/images/CheckOut.ase", __ASSET__assets_images_checkout_ase);
@@ -248,15 +227,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
-		id = "assets/data/placeHolder.tsx";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
 		id = "assets/data/player.tsx";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/roughTiles.tsx";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -264,27 +235,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
-		id = "assets/data/tilesetWalmart.tsx";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
 		id = "assets/data/TilesWalmartOnly.tsx";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/tillesBetter.tsx";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/untitled.tsx";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/Walmart.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/Walmart.oep";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -509,35 +460,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
 		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
 		
-		className.set ("assets/data/placeHolder.tsx", __ASSET__assets_data_placeholder_tsx);
-		type.set ("assets/data/placeHolder.tsx", AssetType.TEXT);
-		
 		className.set ("assets/data/player.tsx", __ASSET__assets_data_player_tsx);
 		type.set ("assets/data/player.tsx", AssetType.TEXT);
-		
-		className.set ("assets/data/roughTiles.tsx", __ASSET__assets_data_roughtiles_tsx);
-		type.set ("assets/data/roughTiles.tsx", AssetType.TEXT);
 		
 		className.set ("assets/data/run debug.txt", __ASSET__assets_data_run_debug_txt);
 		type.set ("assets/data/run debug.txt", AssetType.TEXT);
 		
-		className.set ("assets/data/tilesetWalmart.tsx", __ASSET__assets_data_tilesetwalmart_tsx);
-		type.set ("assets/data/tilesetWalmart.tsx", AssetType.TEXT);
-		
 		className.set ("assets/data/TilesWalmartOnly.tsx", __ASSET__assets_data_tileswalmartonly_tsx);
 		type.set ("assets/data/TilesWalmartOnly.tsx", AssetType.TEXT);
-		
-		className.set ("assets/data/tillesBetter.tsx", __ASSET__assets_data_tillesbetter_tsx);
-		type.set ("assets/data/tillesBetter.tsx", AssetType.TEXT);
-		
-		className.set ("assets/data/untitled.tsx", __ASSET__assets_data_untitled_tsx);
-		type.set ("assets/data/untitled.tsx", AssetType.TEXT);
-		
-		className.set ("assets/data/Walmart.oel", __ASSET__assets_data_walmart_oel);
-		type.set ("assets/data/Walmart.oel", AssetType.TEXT);
-		
-		className.set ("assets/data/Walmart.oep", __ASSET__assets_data_walmart_oep);
-		type.set ("assets/data/Walmart.oep", AssetType.TEXT);
 		
 		className.set ("assets/data/walmart.tmx", __ASSET__assets_data_walmart_tmx);
 		type.set ("assets/data/walmart.tmx", AssetType.TEXT);
@@ -1334,16 +1264,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if flash
 
 @:keep @:bind #if display private #end class __ASSET__assets_data_data_goes_here_txt extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_placeholder_tsx extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_player_tsx extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_roughtiles_tsx extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_run_debug_txt extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_tilesetwalmart_tsx extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_tileswalmartonly_tsx extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_tillesbetter_tsx extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_untitled_tsx extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_walmart_oel extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__assets_data_walmart_oep extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_walmart_tmx extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_checkout_ase extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_checkout_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -1448,13 +1371,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
-
-
-
-
-
-
-
 @:keep #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font { public function new () { super (); name = "Nokia Cellphone FC Small"; } } 
 @:keep #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font { public function new () { super (); name = "Monsterrat"; } } 
 
@@ -1469,16 +1385,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 @:file("assets/data/data-goes-here.txt") #if display private #end class __ASSET__assets_data_data_goes_here_txt extends lime.utils.Bytes {}
-@:file("assets/data/placeHolder.tsx") #if display private #end class __ASSET__assets_data_placeholder_tsx extends lime.utils.Bytes {}
 @:file("assets/data/player.tsx") #if display private #end class __ASSET__assets_data_player_tsx extends lime.utils.Bytes {}
-@:file("assets/data/roughTiles.tsx") #if display private #end class __ASSET__assets_data_roughtiles_tsx extends lime.utils.Bytes {}
 @:file("assets/data/run debug.txt") #if display private #end class __ASSET__assets_data_run_debug_txt extends lime.utils.Bytes {}
-@:file("assets/data/tilesetWalmart.tsx") #if display private #end class __ASSET__assets_data_tilesetwalmart_tsx extends lime.utils.Bytes {}
 @:file("assets/data/TilesWalmartOnly.tsx") #if display private #end class __ASSET__assets_data_tileswalmartonly_tsx extends lime.utils.Bytes {}
-@:file("assets/data/tillesBetter.tsx") #if display private #end class __ASSET__assets_data_tillesbetter_tsx extends lime.utils.Bytes {}
-@:file("assets/data/untitled.tsx") #if display private #end class __ASSET__assets_data_untitled_tsx extends lime.utils.Bytes {}
-@:file("assets/data/Walmart.oel") #if display private #end class __ASSET__assets_data_walmart_oel extends lime.utils.Bytes {}
-@:file("assets/data/Walmart.oep") #if display private #end class __ASSET__assets_data_walmart_oep extends lime.utils.Bytes {}
 @:file("assets/data/walmart.tmx") #if display private #end class __ASSET__assets_data_walmart_tmx extends lime.utils.Bytes {}
 @:file("assets/images/CheckOut.ase") #if display private #end class __ASSET__assets_images_checkout_ase extends lime.utils.Bytes {}
 @:image("assets/images/CheckOut.png") #if display private #end class __ASSET__assets_images_checkout_png extends lime.graphics.Image {}

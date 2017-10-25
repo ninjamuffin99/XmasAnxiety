@@ -34,15 +34,7 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
-		urls.push ("assets/data/placeHolder.tsx");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
 		urls.push ("assets/data/player.tsx");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/roughTiles.tsx");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
@@ -50,27 +42,7 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
-		urls.push ("assets/data/tilesetWalmart.tsx");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
 		urls.push ("assets/data/TilesWalmartOnly.tsx");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/tillesBetter.tsx");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/untitled.tsx");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/Walmart.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/Walmart.oep");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
@@ -335,7 +307,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "32",
+			build: "39",
 			company: "ninjaMuffin",
 			file: "XmasAnxiety",
 			fps: 60,

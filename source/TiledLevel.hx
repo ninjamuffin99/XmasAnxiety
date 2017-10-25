@@ -29,7 +29,7 @@ class TiledLevel extends TiledMap
 	private inline static var c_PATH_LEVEL_TILESHEETS = "assets/data/";
 	
 	public var foregroundTiles:FlxGroup;
-	public var objectLayer:FlxGroup;
+	public var objectsLayer:FlxGroup;
 	public var backgroundLayer:FlxGroup;
 	private var collidableTileLayers:Array<FlxTilemap>;
 	
@@ -41,7 +41,7 @@ class TiledLevel extends TiledMap
 		
 		imagesLayer = new FlxGroup();
 		foregroundTiles = new FlxGroup();
-		objectLayer = new FlxGroup();
+		objectsLayer = new FlxGroup();
 		backgroundLayer = new FlxGroup();
 		
 		FlxG.camera.setScrollBoundsRect(0, 0, fullWidth, fullHeight, true);
@@ -195,24 +195,26 @@ class TiledLevel extends TiledMap
 		
 		switch (o.type.toLowerCase())
 		{
-			case "player_start":
+			case "player":
 				var player = new Player(x, y);
 				FlxG.camera.follow(player);
-				state.player = player;
+				state._player = player;
 				group.add(player);
 			case "floor":
 				var floor = new FlxObject(x, y, o.width, o.height);
 				state.floor = floor;
-			case "coin":
+			case "pickupsClothing":
 				var tileset = g.map.getGidOwner(o.gid);
-				var coin = new FlxSprite(x, y, c_PATH_LEVEL_TILESHEETS + tileset.imageSource);
-				state.coins.add(coin);
+				var pickupClothing = new PickupSpot(x, y, "clothing");
+				state._grpPickupSpots.add(pickupClothing);
+			/*
 			case "exit":
 				var exit = new FlxSprite(x, y);
 				exit.makeGraphic(32, 32);
 				exit.exists = false;
 				state.exit = exit;
 				group.add(exit);
+				*/
 		}
 	}
 	

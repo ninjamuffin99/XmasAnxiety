@@ -22,14 +22,14 @@ import flixel.math.FlxMath;
 
 class PlayState extends FlxState
 {
-	private var _player:Player;
+	public var _player:Player;
 	private var _cameraFocus:FlxSprite;
 	
-	private var _grpNPCs:FlxTypedGroup<NPC>;
-	private var _grpPickupSpots:FlxTypedGroup<PickupSpot>;
+	public var _grpNPCs:FlxTypedGroup<NPC>;
+	public var _grpPickupSpots:FlxTypedGroup<PickupSpot>;
 	
 	
-	private var _map:TiledMap;
+	public var _map:TiledLevel;
 	public var _mWalls:FlxTilemap;
 	public var _mFloors:FlxTilemap;
 	
@@ -48,14 +48,24 @@ class PlayState extends FlxState
 	private var _music:FlxSound;
 	private var _playingPA:Bool = false;
 	
+	//exit really but using Floor for convienience
+	public var floor:FlxObject;
+	
 	override public function create():Void
 	{
 		_cameraFocus = new FlxSprite();
 		_cameraFocus.makeGraphic(1, 1);
 		add(_cameraFocus);
 		
-		_map = new TiledMap(AssetPaths.walmart__tmx);
+		_map = new TiledLevel("assets/data/walmart.tmx", this);
 		
+		add(_map.backgroundLayer);
+		
+		add (_map.imagesLayer);
+		add(_map.objectsLayer);
+		add(_map.foregroundTiles);
+		
+		/*		
 		_mFloors = new FlxTilemap();
 		_mFloors.loadMapFromArray(cast(_map.getLayer("Floors"), TiledTileLayer).tileArray, _map.width, _map.height, AssetPaths.TilesOnly__png, _map.tileWidth, _map.tileHeight, FlxTilemapAutoTiling.OFF, 1, 1, 3);
 		add(_mFloors);
@@ -63,6 +73,7 @@ class PlayState extends FlxState
 		_mWalls = new FlxTilemap();
 		_mWalls.loadMapFromArray(cast(_map.getLayer("Floors"), TiledTileLayer).tileArray, _map.width, _map.height, AssetPaths.TilesOnly__png, _map.tileWidth, _map.tileHeight, FlxTilemapAutoTiling.OFF, 1, 1, 3);
 		add(_mWalls);
+		*/
 		
 		
 		
