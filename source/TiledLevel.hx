@@ -26,7 +26,7 @@ import haxe.io.Path;
 class TiledLevel extends TiledMap 
 {
 	
-	private inline static var c_PATH_LEVEL_TILESHEETS = "assets/data/";
+	private inline static var c_PATH_LEVEL_TILESHEETS = "assets/images/";
 	
 	public var foregroundTiles:FlxGroup;
 	public var objectsLayer:FlxGroup;

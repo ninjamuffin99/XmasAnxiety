@@ -75,7 +75,7 @@ class PlayState extends FlxState
 		add(_mWalls);
 		*/
 		
-		
+		/*
 		
 		_player = new Player();
 		add(_player);
@@ -105,7 +105,7 @@ class PlayState extends FlxState
 		FlxG.camera.follow(_player, LOCKON, 0.1);
 		FlxG.camera.followLead.x = FlxG.camera.followLead.y = 30;
 		//FlxG.worldBounds.set(0, 0, _map.width, _map.height);
-		
+		*/
 		
 		
 		createHUD();

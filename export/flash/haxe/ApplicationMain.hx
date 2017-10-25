@@ -42,6 +42,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/data/TilesOnly.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/data/TilesWalmartOnly.tsx");
 		types.push (lime.Assets.AssetType.TEXT);
 		
@@ -155,14 +159,6 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/images/tileset1resized.png");
-		types.push (lime.Assets.AssetType.IMAGE);
-		
-		
-		urls.push ("assets/images/TilesOnly.ase");
-		types.push (lime.Assets.AssetType.BINARY);
-		
-		
-		urls.push ("assets/images/TilesOnly.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -307,7 +303,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "39",
+			build: "45",
 			company: "ninjaMuffin",
 			file: "XmasAnxiety",
 			fps: 60,
