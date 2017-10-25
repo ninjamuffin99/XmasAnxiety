@@ -30,8 +30,6 @@ class PlayState extends FlxState
 	
 	
 	public var _map:TiledLevel;
-	public var _mWalls:FlxTilemap;
-	public var _mFloors:FlxTilemap;
 	
 	private var _camZoom:Float = 0.7;
 	
@@ -57,7 +55,7 @@ class PlayState extends FlxState
 		_cameraFocus.makeGraphic(1, 1);
 		add(_cameraFocus);
 		
-		_map = new TiledLevel("assets/data/walmart.tmx", this);
+		_map = new TiledLevel("assets/data/walmartReal.tmx", this);
 		
 		add(_map.backgroundLayer);
 		
@@ -65,15 +63,6 @@ class PlayState extends FlxState
 		add(_map.objectsLayer);
 		add(_map.foregroundTiles);
 		
-		/*		
-		_mFloors = new FlxTilemap();
-		_mFloors.loadMapFromArray(cast(_map.getLayer("Floors"), TiledTileLayer).tileArray, _map.width, _map.height, AssetPaths.TilesOnly__png, _map.tileWidth, _map.tileHeight, FlxTilemapAutoTiling.OFF, 1, 1, 3);
-		add(_mFloors);
-		
-		_mWalls = new FlxTilemap();
-		_mWalls.loadMapFromArray(cast(_map.getLayer("Floors"), TiledTileLayer).tileArray, _map.width, _map.height, AssetPaths.TilesOnly__png, _map.tileWidth, _map.tileHeight, FlxTilemapAutoTiling.OFF, 1, 1, 3);
-		add(_mWalls);
-		*/
 		
 		/*
 		
@@ -212,8 +201,6 @@ class PlayState extends FlxState
 		}
 		
 		controls();
-		FlxG.collide(_player, _mWalls);
-		FlxG.collide(_grpNPCs, _mWalls);
 		
 		_grpNPCs.forEachAlive(checkNPCVision);
 		_grpNPCs.forEachAlive(_mapLeaveCheck);
@@ -243,12 +230,13 @@ class PlayState extends FlxState
 	}
 	
 	private function checkNPCVision(npc:NPC):Void
-	
 	{
+		/*
 		if (_mWalls.ray(npc.getMidpoint(), _player.getMidpoint()) && FlxMath.isDistanceWithin(_player, npc, 100))
 		{
 			_player.anxiety += 0.1;
 		}
+		*/
 	}
 	
 	private function _mapLeaveCheck(npc:NPC):Void

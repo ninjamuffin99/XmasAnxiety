@@ -54,6 +54,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/data/walmartReal.tmx");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
 		urls.push ("assets/images/CheckOut.ase");
 		types.push (lime.Assets.AssetType.BINARY);
 		
@@ -163,6 +167,10 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/images/walkmc.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/walmartRef.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -303,7 +311,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "45",
+			build: "53",
 			company: "ninjaMuffin",
 			file: "XmasAnxiety",
 			fps: 60,
