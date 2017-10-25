@@ -10,9 +10,13 @@ import flixel.addons.editors.tiled.TiledMap;
 import flixel.addons.editors.tiled.TiledMap.FlxTiledMapAsset;
 import flixel.addons.editors.tiled.TiledObject;
 import flixel.addons.editors.tiled.TiledObjectLayer;
+import flixel.addons.editors.tiled.TiledTileLayer;
+import flixel.addons.editors.tiled.TiledTilePropertySet;
 import flixel.addons.editors.tiled.TiledTileSet;
+import flixel.addons.tile.FlxTilemapExt;
 import flixel.group.FlxGroup;
 import flixel.tile.FlxTilemap;
+import haxe.io.Path;
 
 /**
  * ...
@@ -47,6 +51,52 @@ class TiledLevel extends TiledMap
 		for (layer in layers)
 		{
 			if (layer.type != TiledLayerType.TILE) continue;
+			var tileLayer:TiledTileLayer = cast layer;
+			
+			var tileSheetName:String = tileLayer.properties.get("tilesheet");
+			
+			if (tileSheetName == null)
+				throw "'tileset' property not defined for the '" + tileLayer.name + "' layer. Please add the property to the layer.";
+			
+			var tileSet:TiledTileSet = null;
+			for (ts in tilesets)
+			{
+				if (ts.name == tileSheetName)
+				{
+					tileSet = ts;
+					break;
+				}
+			}
+			
+			if (tileSet == null)
+				throw "Tileset '" + tileSheetName + " not found. Did you misspell the 'tilesheet' property in " + tileLayer.name + "' layer?";
+			
+			var imagePath = new Path(tileSet.imageSource);
+			var processedPath = c_PATH_LEVEL_TILESHEETS + imagePath.file + "." + imagePath.ext;
+			
+			var tilemap = new FlxTilemapExt();
+			tilemap.loadMapFromArray(tileLayer.tileArray, width, height, processedPath, tileSet.tileWidth, tileSet.tileHeight, OFF, tileSet.firstGID, 1, 1);
+			
+			if (tileLayer.properties.contains("animated"))
+			{
+				var tileset = tilesets["level"];
+				var specialTiles:Map<Int, TiledTilePropertySet> = new Map();
+				for (tileProp in tileset.tileProps)
+				{
+					if (tileProp != null && tileProp.animationFrames.length > 0)
+					{
+						specialTiles[tileProp.tileID + tileset.firstGID] = tileProp;
+					}
+				}
+				var tileLayer:TiledTileLayer = cast layer;
+				tilemap.setSpecialTiles([
+						for (tile in tileLayer.tiles)
+							if (tile != null && specialTiles.exists(tile.tileID))
+								getAnimatedTile(specialTiles[tile.tileID], tileset)
+							else null
+				]);
+			}
+			
 		}
 	}
 	
