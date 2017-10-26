@@ -50,7 +50,7 @@ class PlayState extends FlxState
 	override public function create():Void
 	{
 		FlxG.log.add("playstate chaekced");
-		_map = new TiledLevel("assets/data/walmartReal.tmx", this);
+		_map = new TiledLevel("assets/data/walmart.tmx", this);
 		
 		FlxG.log.add("after map loaded");
 		
