@@ -19,6 +19,7 @@ import flixel.tile.FlxBaseTilemap.FlxTilemapAutoTiling;
 import flixel.tile.FlxTilemap;
 import flixel.ui.FlxButton;
 import flixel.math.FlxMath;
+import flixel.util.FlxColor;
 
 class PlayState extends FlxState
 {
@@ -94,6 +95,7 @@ class PlayState extends FlxState
 		//FlxG.camera.zoom = _camZoom;
 		FlxG.camera.follow(_player, LOCKON, 0.1);
 		FlxG.camera.followLead.x = FlxG.camera.followLead.y = 30;
+		FlxG.camera.fade(FlxColor.BLACK, 1, true);
 		//FlxG.worldBounds.set(0, 0, _map.width, _map.height);
 		
 		
