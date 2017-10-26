@@ -103,6 +103,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -176,6 +177,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/SideShelves.ase", AssetType.BINARY);
 		className.set ("assets/images/SideShelveSmall.png", __ASSET__assets_images_sideshelvesmall_png);
 		type.set ("assets/images/SideShelveSmall.png", AssetType.IMAGE);
+		className.set ("assets/images/thumbnailTitle.png", __ASSET__assets_images_thumbnailtitle_png);
+		type.set ("assets/images/thumbnailTitle.png", AssetType.IMAGE);
 		className.set ("assets/images/tiles.png", __ASSET__assets_images_tiles_png);
 		type.set ("assets/images/tiles.png", AssetType.IMAGE);
 		className.set ("assets/images/tileset1.png", __ASSET__assets_images_tileset1_png);
@@ -354,6 +357,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.BINARY);
 		id = "assets/images/SideShelveSmall.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/thumbnailTitle.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -566,6 +573,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/images/SideShelveSmall.png", __ASSET__assets_images_sideshelvesmall_png);
 		type.set ("assets/images/SideShelveSmall.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/thumbnailTitle.png", __ASSET__assets_images_thumbnailtitle_png);
+		type.set ("assets/images/thumbnailTitle.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/tiles.png", __ASSET__assets_images_tiles_png);
 		type.set ("assets/images/tiles.png", AssetType.IMAGE);
@@ -1315,6 +1325,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_shelvesopen_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_sideshelves_ase extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_sideshelvesmall_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_thumbnailtitle_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tiles_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tileset1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tileset1resized_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -1342,6 +1353,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
 
 
 
@@ -1440,6 +1452,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/images/shelvesOpen.png") #if display private #end class __ASSET__assets_images_shelvesopen_png extends lime.graphics.Image {}
 @:file("assets/images/SideShelves.ase") #if display private #end class __ASSET__assets_images_sideshelves_ase extends lime.utils.Bytes {}
 @:image("assets/images/SideShelveSmall.png") #if display private #end class __ASSET__assets_images_sideshelvesmall_png extends lime.graphics.Image {}
+@:image("assets/images/thumbnailTitle.png") #if display private #end class __ASSET__assets_images_thumbnailtitle_png extends lime.graphics.Image {}
 @:image("assets/images/tiles.png") #if display private #end class __ASSET__assets_images_tiles_png extends lime.graphics.Image {}
 @:image("assets/images/tileset1.png") #if display private #end class __ASSET__assets_images_tileset1_png extends lime.graphics.Image {}
 @:image("assets/images/tileset1resized.png") #if display private #end class __ASSET__assets_images_tileset1resized_png extends lime.graphics.Image {}

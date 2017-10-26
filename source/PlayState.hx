@@ -121,6 +121,7 @@ class PlayState extends FlxState
 			_player.x = x;
 			_player.y = y;
 		}
+		/* some bullshit
 		if (entityName == "pickupsAppliance")
 		{
 			_grpPickupSpots.add(new PickupSpot(x, y, "appliance"));
@@ -154,6 +155,7 @@ class PlayState extends FlxState
 		{
 			_grpPickupSpots.add(new PickupSpot(x, y));
 		}
+		*/
 	}
 	
 	private function createHUD():Void
