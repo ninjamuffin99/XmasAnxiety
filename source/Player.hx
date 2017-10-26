@@ -46,7 +46,7 @@ class Player extends FlxSprite
 	{
 		super.update(elapsed);
 		
-		anxiety = FlxMath.bound(anxiety, 0, 100);
+		anxiety = FlxMath.bound(anxiety, 1, 100);
 		controls();
 	}
 	

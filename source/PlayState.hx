@@ -26,6 +26,7 @@ class PlayState extends FlxState
 	
 	public var _grpNPCs:FlxTypedGroup<NPC>;
 	public var _grpPickupSpots:FlxGroup;
+	public var _grpOOB:FlxGroup;
 	
 	public var _map:TiledLevel;
 	
@@ -52,6 +53,7 @@ class PlayState extends FlxState
 		FlxG.log.add("playstate chaekced");
 		
 		_grpPickupSpots = new FlxGroup();
+		_grpOOB = new FlxGroup();
 		
 		_map = new TiledLevel("assets/data/walmartReal.tmx", this);
 		
@@ -65,6 +67,7 @@ class PlayState extends FlxState
 		add(_map.foregroundTiles);
 		add(_map.objectsLayer);
 		add(_grpPickupSpots);
+		add(_grpOOB);
 		FlxG.log.add("after layers Loded");
 		
 		_grpNPCs = new FlxTypedGroup<NPC>();
@@ -220,7 +223,18 @@ class PlayState extends FlxState
 			FlxG.switchState(new MenuState());
 		}
 		
+		_grpNPCs.forEachExists(checkOOB);
+		
+		
 		_anxietyText.text = "Anxiety: " + Math.floor(_player.anxiety);
+	}
+	
+	private function checkOOB(npc:NPC):Void
+	{
+		if (FlxG.overlap(npc, _grpOOB))
+		{
+			npc.setPosition(FlxG.random.float(32, _map.fullWidth), FlxG.random.float(32, _map.fullHeight));
+		}
 	}
 	
 	private function controls():Void
@@ -238,7 +252,7 @@ class PlayState extends FlxState
 	private function checkNPCVision(npc:NPC):Void
 	{
 		
-		if (_map.collidableTileLayers[0].ray(npc.getMidpoint(), _player.getMidpoint()) && FlxMath.isDistanceWithin(_player, npc, 100))
+		if (_map.collidableTileLayers[0].ray(npc.getMidpoint(), _player.getMidpoint()) && FlxMath.isDistanceWithin(_player, npc, 115))
 		{
 			_player.anxiety += 0.1;
 		}
