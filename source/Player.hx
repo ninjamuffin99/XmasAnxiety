@@ -32,7 +32,7 @@ class Player extends FlxSprite
 		animation.add("u", [16, 17, 18, 19, 20, 21, 22, 23], 8, true);
 		animation.add("l", lanim, 8, true);
 		
-		width = 20
+		width = 20;
 		offset.x = 6;
 		height = 16;
 		offset.y = 50;

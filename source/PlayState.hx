@@ -24,7 +24,7 @@ class PlayState extends FlxState
 {
 	public var _player:Player;
 	
-	public var _grpNPCs:FlxGroup;
+	public var _grpNPCs:FlxTypedGroup<NPC>;
 	public var _grpPickupSpots:FlxGroup;
 	
 	public var _map:TiledLevel;
@@ -65,7 +65,6 @@ class PlayState extends FlxState
 		
 		FlxG.log.add("after layers Loded");
 		
-		/*
 		_grpNPCs = new FlxTypedGroup<NPC>();
 		add(_grpNPCs);
 		
@@ -73,11 +72,11 @@ class PlayState extends FlxState
 		FlxG.log.add("people added: " + _peopleCount);
 		while (_peopleCount > 0)
 		{
-			_grpNPCs.add(new NPC(FlxG.random.float(32, _mWalls.width), FlxG.random.float(32, _mWalls.height)));
+			_grpNPCs.add(new NPC(FlxG.random.float(32, _map.fullWidth), FlxG.random.float(32, _map.fullHeight)));
 			_peopleCount -= 1;
 		}
 		
-		
+		/*
 		_grpPickupSpots = new FlxTypedGroup<PickupSpot>();
 		add(_grpPickupSpots);
 		
@@ -200,6 +199,7 @@ class PlayState extends FlxState
 		}
 		
 		_map.collideWithLevel(_player);
+		_map.collideWithLevel(_grpNPCs);
 		
 		controls();
 		/*
