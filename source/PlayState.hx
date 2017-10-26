@@ -50,6 +50,9 @@ class PlayState extends FlxState
 	override public function create():Void
 	{
 		FlxG.log.add("playstate chaekced");
+		
+		_grpPickupSpots = new FlxGroup();
+		
 		_map = new TiledLevel("assets/data/walmartReal.tmx", this);
 		
 		FlxG.log.add("after map loaded");
@@ -59,10 +62,9 @@ class PlayState extends FlxState
 		
 		add (_map.imagesLayer);
 		
-		
 		add(_map.foregroundTiles);
 		add(_map.objectsLayer);
-		
+		add(_grpPickupSpots);
 		FlxG.log.add("after layers Loded");
 		
 		_grpNPCs = new FlxTypedGroup<NPC>();
@@ -76,10 +78,9 @@ class PlayState extends FlxState
 			_peopleCount -= 1;
 		}
 		
-		/*
-		_grpPickupSpots = new FlxTypedGroup<PickupSpot>();
-		add(_grpPickupSpots);
 		
+	
+		/*
 		var tmpMap:TiledObjectLayer = cast _map.getLayer("entities");
 		for (e in tmpMap.objects)
 		{

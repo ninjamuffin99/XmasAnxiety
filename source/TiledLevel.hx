@@ -224,7 +224,9 @@ class TiledLevel extends TiledMap
 			case "floor":
 				var floor = new FlxObject(x, y, o.width, o.height);
 				state.floor = floor;
-				
+			case "pickup":
+				var pickup = new PickupSpot(x, y, o.properties.get("itemType"));
+				state._grpPickupSpots.add(pickup);
 			/*	
 			case "coin":
 				var tileset = g.map.getGidOwner(o.gid);

@@ -3,6 +3,7 @@ package;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.system.FlxAssets.FlxGraphicAsset;
+import flixel.util.FlxColor;
 
 /**
  * ...
@@ -15,7 +16,7 @@ class PickupSpot extends FlxSprite
 	public function new(?X:Float=0, ?Y:Float=0, ?itemType:String) 
 	{
 		super(X, Y);
-		makeGraphic(16, 16);
+		makeGraphic(16, 16, FlxColor.BLUE);
 		
 		_itemType = itemType;
 		
