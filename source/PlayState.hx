@@ -58,15 +58,13 @@ class PlayState extends FlxState
 		add(_map.backgroundLayer);
 		
 		add (_map.imagesLayer);
-		add(_map.objectsLayer);
+		
+		
 		add(_map.foregroundTiles);
-		
+		add(_map.objectsLayer);
 		FlxG.log.add("after layers Loded");
+		
 		/*
-		
-		_player = new Player();
-		add(_player);
-		
 		_grpNPCs = new FlxTypedGroup<NPC>();
 		add(_grpNPCs);
 		
@@ -87,12 +85,12 @@ class PlayState extends FlxState
 		{
 			placeEntities(e.type, e.xmlData.x);
 		}
-		
+		*/
 		//FlxG.camera.zoom = _camZoom;
 		FlxG.camera.follow(_player, LOCKON, 0.1);
 		FlxG.camera.followLead.x = FlxG.camera.followLead.y = 30;
 		//FlxG.worldBounds.set(0, 0, _map.width, _map.height);
-		*/
+		
 		
 		
 		createHUD();

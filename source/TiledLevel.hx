@@ -201,7 +201,6 @@ class TiledLevel extends TiledMap
 			var depth = Std.parseFloat( object.properties.get("depth"));
 			decoSprite.scrollFactor.set(depth,depth);
 		}
-
 		backgroundLayer.add(decoSprite);
 	}
 	
@@ -216,12 +215,12 @@ class TiledLevel extends TiledMap
 		
 		switch (o.type.toLowerCase())
 		{
+			
 			case "player_start":
-				var player = new Player(x, y);
-				FlxG.camera.follow(player);
-				state._player = player;
-				group.add(player);
-				
+				state._player = new Player(x, y);
+				group.add(state._player);
+				FlxG.log.add("Player object added");
+			
 			case "floor":
 				var floor = new FlxObject(x, y, o.width, o.height);
 				state.floor = floor;

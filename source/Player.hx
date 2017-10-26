@@ -37,7 +37,7 @@ class Player extends FlxSprite
 		
 		drag.x = drag.y = 1000;
 		
-		
+		FlxG.log.add("created Chatacter");
 	}
 	
 	override public function update(elapsed:Float):Void 
