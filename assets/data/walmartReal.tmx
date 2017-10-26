@@ -24,7 +24,7 @@
  </layer>
  <objectgroup name="objects">
   <object id="3" name="player_start" type="player_start" x="4118.43" y="3137.57" width="50.3636" height="51.8182"/>
-  <object id="6" name="pickupClothing" type="pickup" x="696" y="564">
+  <object id="6" name="pickupClothing" type="pickup" x="4047.33" y="2965.33" width="16" height="8.66667">
    <properties>
     <property name="itemType" value="clothing"/>
    </properties>

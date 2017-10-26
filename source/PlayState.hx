@@ -106,6 +106,8 @@ class PlayState extends FlxState
 		
 		FlxG.log.add("bottom of create");
 		
+		//FlxG.log.add(_grpPickupSpots);
+		
 		super.create();
 	}
 	
@@ -203,12 +205,12 @@ class PlayState extends FlxState
 		_map.collideWithLevel(_grpNPCs);
 		
 		controls();
-		/*
-		_grpNPCs.forEachAlive(checkNPCVision);
-		_grpNPCs.forEachAlive(_mapLeaveCheck);
 		
-		_grpPickupSpots.forEachAlive(pickupItem);
-		*/
+		_grpNPCs.forEachAlive(this.checkNPCVision);
+		/*
+		_grpNPCs.forEachAlive(_mapLeaveCheck);
+		*/		
+	
 		_player.anxiety -= 0.01;
 		
 		if (_player.anxiety >= 99)
@@ -233,12 +235,12 @@ class PlayState extends FlxState
 	
 	private function checkNPCVision(npc:NPC):Void
 	{
-		/*
-		if (_mWalls.ray(npc.getMidpoint(), _player.getMidpoint()) && FlxMath.isDistanceWithin(_player, npc, 100))
+		
+		if (_map.getLayer(npc.getMidpoint(), _player.getMidpoint()) && FlxMath.isDistanceWithin(_player, npc, 100))
 		{
 			_player.anxiety += 0.1;
 		}
-		*/
+		
 	}
 	
 	private function _mapLeaveCheck(npc:NPC):Void
