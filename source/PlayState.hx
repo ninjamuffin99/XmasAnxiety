@@ -24,8 +24,8 @@ class PlayState extends FlxState
 {
 	public var _player:Player;
 	
-	public var _grpNPCs:FlxGroup<NPC>;
-	public var _grpPickupSpots:FlxGroup<PickupSpot>;
+	public var _grpNPCs:FlxGroup;
+	public var _grpPickupSpots:FlxGroup;
 	
 	public var _map:TiledLevel;
 	
@@ -201,12 +201,12 @@ class PlayState extends FlxState
 		}
 		
 		controls();
-		
+		/*
 		_grpNPCs.forEachAlive(checkNPCVision);
 		_grpNPCs.forEachAlive(_mapLeaveCheck);
 		
 		_grpPickupSpots.forEachAlive(pickupItem);
-		
+		*/
 		_player.anxiety -= 0.01;
 		
 		if (_player.anxiety >= 99)
