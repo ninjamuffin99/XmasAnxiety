@@ -23,11 +23,9 @@ import flixel.math.FlxMath;
 class PlayState extends FlxState
 {
 	public var _player:Player;
-	private var _cameraFocus:FlxSprite;
 	
-	public var _grpNPCs:FlxTypedGroup<NPC>;
-	public var _grpPickupSpots:FlxTypedGroup<PickupSpot>;
-	
+	public var _grpNPCs:FlxGroup<NPC>;
+	public var _grpPickupSpots:FlxGroup<PickupSpot>;
 	
 	public var _map:TiledLevel;
 	
@@ -51,19 +49,19 @@ class PlayState extends FlxState
 	
 	override public function create():Void
 	{
-		_cameraFocus = new FlxSprite();
-		_cameraFocus.makeGraphic(1, 1);
-		add(_cameraFocus);
 		FlxG.log.add("playstate chaekced");
 		_map = new TiledLevel("assets/data/walmartReal.tmx", this);
+		
 		FlxG.log.add("after map loaded");
+		
+		
 		add(_map.backgroundLayer);
 		
 		add (_map.imagesLayer);
 		add(_map.objectsLayer);
 		add(_map.foregroundTiles);
 		
-		
+		FlxG.log.add("after layers Loded");
 		/*
 		
 		_player = new Player();
@@ -106,6 +104,8 @@ class PlayState extends FlxState
 		_music.volume = 0.5;
 		add(_music);
 		_music.play();
+		
+		FlxG.log.add("bottom of create");
 		
 		super.create();
 	}
