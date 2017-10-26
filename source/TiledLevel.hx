@@ -31,7 +31,7 @@ class TiledLevel extends TiledMap
 	public var foregroundTiles:FlxGroup;
 	public var objectsLayer:FlxGroup;
 	public var backgroundLayer:FlxGroup;
-	private var collidableTileLayers:Array<FlxTilemap>;
+	public var collidableTileLayers:Array<FlxTilemap>;
 	
 	// Sprites of images layers
 	public var imagesLayer:FlxGroup;

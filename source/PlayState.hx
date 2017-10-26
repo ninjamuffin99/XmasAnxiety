@@ -236,7 +236,7 @@ class PlayState extends FlxState
 	private function checkNPCVision(npc:NPC):Void
 	{
 		
-		if (_map.getLayer(npc.getMidpoint(), _player.getMidpoint()) && FlxMath.isDistanceWithin(_player, npc, 100))
+		if (_map.collidableTileLayers[0].ray(npc.getMidpoint(), _player.getMidpoint()) && FlxMath.isDistanceWithin(_player, npc, 100))
 		{
 			_player.anxiety += 0.1;
 		}
