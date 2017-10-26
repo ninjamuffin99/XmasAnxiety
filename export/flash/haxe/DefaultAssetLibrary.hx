@@ -104,6 +104,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -119,6 +120,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/player.tsx", AssetType.TEXT);
 		className.set ("assets/data/run debug.txt", __ASSET__assets_data_run_debug_txt);
 		type.set ("assets/data/run debug.txt", AssetType.TEXT);
+		className.set ("assets/data/tileset.png", __ASSET__assets_data_tileset_png);
+		type.set ("assets/data/tileset.png", AssetType.IMAGE);
 		className.set ("assets/data/TilesOnly.png", __ASSET__assets_data_tilesonly_png);
 		type.set ("assets/data/TilesOnly.png", AssetType.IMAGE);
 		className.set ("assets/data/TilesWalmartOnly.tsx", __ASSET__assets_data_tileswalmartonly_tsx);
@@ -244,6 +247,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
+		id = "assets/data/tileset.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/data/TilesOnly.png";
 		path.set (id, id);
 		
@@ -486,6 +493,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/data/run debug.txt", __ASSET__assets_data_run_debug_txt);
 		type.set ("assets/data/run debug.txt", AssetType.TEXT);
+		
+		className.set ("assets/data/tileset.png", __ASSET__assets_data_tileset_png);
+		type.set ("assets/data/tileset.png", AssetType.IMAGE);
 		
 		className.set ("assets/data/TilesOnly.png", __ASSET__assets_data_tilesonly_png);
 		type.set ("assets/data/TilesOnly.png", AssetType.IMAGE);
@@ -1296,6 +1306,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_data_data_goes_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_player_tsx extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_run_debug_txt extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_tileset_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_data_tilesonly_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_data_tileswalmartonly_tsx extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_tileswalmartv1_tsx extends flash.utils.ByteArray { }
@@ -1407,6 +1418,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
 @:keep #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font { public function new () { super (); name = "Nokia Cellphone FC Small"; } } 
 @:keep #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font { public function new () { super (); name = "Monsterrat"; } } 
 
@@ -1423,6 +1435,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/data/data-goes-here.txt") #if display private #end class __ASSET__assets_data_data_goes_here_txt extends lime.utils.Bytes {}
 @:file("assets/data/player.tsx") #if display private #end class __ASSET__assets_data_player_tsx extends lime.utils.Bytes {}
 @:file("assets/data/run debug.txt") #if display private #end class __ASSET__assets_data_run_debug_txt extends lime.utils.Bytes {}
+@:image("assets/data/tileset.png") #if display private #end class __ASSET__assets_data_tileset_png extends lime.graphics.Image {}
 @:image("assets/data/TilesOnly.png") #if display private #end class __ASSET__assets_data_tilesonly_png extends lime.graphics.Image {}
 @:file("assets/data/TilesWalmartOnly.tsx") #if display private #end class __ASSET__assets_data_tileswalmartonly_tsx extends lime.utils.Bytes {}
 @:file("assets/data/TilesWalmartV1.tsx") #if display private #end class __ASSET__assets_data_tileswalmartv1_tsx extends lime.utils.Bytes {}

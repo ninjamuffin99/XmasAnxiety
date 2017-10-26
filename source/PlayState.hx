@@ -65,6 +65,7 @@ class PlayState extends FlxState
 		add (_map.imagesLayer);
 		
 		add(_map.foregroundTiles);
+		add(_map.foregroundObjects);
 		add(_map.objectsLayer);
 		add(_grpPickupSpots);
 		add(_grpOOB);
@@ -110,6 +111,8 @@ class PlayState extends FlxState
 		FlxG.log.add("bottom of create");
 		
 		//FlxG.log.add(_grpPickupSpots);
+		
+		_grpNPCs.forEachExists(checkOOB);
 		
 		super.create();
 	}
@@ -211,7 +214,7 @@ class PlayState extends FlxState
 		
 		controls();
 		
-		_grpNPCs.forEachAlive(this.checkNPCVision);
+		_grpNPCs.forEachAlive(checkNPCVision);
 		/*
 		_grpNPCs.forEachAlive(_mapLeaveCheck);
 		*/		
@@ -223,7 +226,7 @@ class PlayState extends FlxState
 			FlxG.switchState(new MenuState());
 		}
 		
-		_grpNPCs.forEachExists(checkOOB);
+		
 		
 		
 		_anxietyText.text = "Anxiety: " + Math.floor(_player.anxiety);
