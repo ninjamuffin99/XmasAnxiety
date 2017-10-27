@@ -237,7 +237,7 @@ class PlayState extends FlxState
 	
 	private function checkOOB(npc:NPC):Void
 	{
-		if (FlxG.overlap(npc, _grpOOB))
+		while (FlxG.overlap(npc, _grpOOB))
 		{
 			npc.setPosition(FlxG.random.float(32, _map.fullWidth), FlxG.random.float(32, _map.fullHeight));
 		}
@@ -258,7 +258,7 @@ class PlayState extends FlxState
 	private function checkNPCVision(npc:NPC):Void
 	{
 		
-		if (_map.collidableTileLayers[0].ray(npc.getMidpoint(), _player.getMidpoint()) && FlxMath.isDistanceWithin(_player, npc, 115))
+		if (_map.collidableTileLayers[2].ray(npc.getMidpoint(), _player.getMidpoint()) && FlxMath.isDistanceWithin(_player, npc, 115))
 		{
 			_player.anxiety += 0.1;
 		}
