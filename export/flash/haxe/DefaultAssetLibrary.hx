@@ -105,6 +105,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -172,6 +174,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/npc8.png", AssetType.IMAGE);
 		className.set ("assets/images/npc9.png", __ASSET__assets_images_npc9_png);
 		type.set ("assets/images/npc9.png", AssetType.IMAGE);
+		className.set ("assets/images/pickupSprite.ase", __ASSET__assets_images_pickupsprite_ase);
+		type.set ("assets/images/pickupSprite.ase", AssetType.BINARY);
+		className.set ("assets/images/pickupSprite.png", __ASSET__assets_images_pickupsprite_png);
+		type.set ("assets/images/pickupSprite.png", AssetType.IMAGE);
 		className.set ("assets/images/shelvesOpen.ase", __ASSET__assets_images_shelvesopen_ase);
 		type.set ("assets/images/shelvesOpen.ase", AssetType.BINARY);
 		className.set ("assets/images/shelvesOpen.png", __ASSET__assets_images_shelvesopen_png);
@@ -348,6 +354,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/npc9.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/pickupSprite.ase";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/pickupSprite.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -571,6 +585,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/images/npc9.png", __ASSET__assets_images_npc9_png);
 		type.set ("assets/images/npc9.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/pickupSprite.ase", __ASSET__assets_images_pickupsprite_ase);
+		type.set ("assets/images/pickupSprite.ase", AssetType.BINARY);
+		
+		className.set ("assets/images/pickupSprite.png", __ASSET__assets_images_pickupsprite_png);
+		type.set ("assets/images/pickupSprite.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/shelvesOpen.ase", __ASSET__assets_images_shelvesopen_ase);
 		type.set ("assets/images/shelvesOpen.ase", AssetType.BINARY);
@@ -1332,6 +1352,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_npc7_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_npc8_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_npc9_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_pickupsprite_ase extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_pickupsprite_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_shelvesopen_ase extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_shelvesopen_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_sideshelves_ase extends flash.utils.ByteArray { }
@@ -1364,6 +1386,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
+
 
 
 
@@ -1461,6 +1485,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/images/npc7.png") #if display private #end class __ASSET__assets_images_npc7_png extends lime.graphics.Image {}
 @:image("assets/images/npc8.png") #if display private #end class __ASSET__assets_images_npc8_png extends lime.graphics.Image {}
 @:image("assets/images/npc9.png") #if display private #end class __ASSET__assets_images_npc9_png extends lime.graphics.Image {}
+@:file("assets/images/pickupSprite.ase") #if display private #end class __ASSET__assets_images_pickupsprite_ase extends lime.utils.Bytes {}
+@:image("assets/images/pickupSprite.png") #if display private #end class __ASSET__assets_images_pickupsprite_png extends lime.graphics.Image {}
 @:file("assets/images/shelvesOpen.ase") #if display private #end class __ASSET__assets_images_shelvesopen_ase extends lime.utils.Bytes {}
 @:image("assets/images/shelvesOpen.png") #if display private #end class __ASSET__assets_images_shelvesopen_png extends lime.graphics.Image {}
 @:file("assets/images/SideShelves.ase") #if display private #end class __ASSET__assets_images_sideshelves_ase extends lime.utils.Bytes {}

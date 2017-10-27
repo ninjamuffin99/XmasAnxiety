@@ -146,6 +146,14 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/pickupSprite.ase");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
+		urls.push ("assets/images/pickupSprite.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/shelvesOpen.ase");
 		types.push (lime.Assets.AssetType.BINARY);
 		
@@ -323,7 +331,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "148",
+			build: "158",
 			company: "ninjaMuffin",
 			file: "XmasAnxiety",
 			fps: 60,

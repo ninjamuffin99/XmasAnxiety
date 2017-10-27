@@ -16,7 +16,9 @@ class PickupSpot extends FlxSprite
 	public function new(?X:Float=0, ?Y:Float=0, ?itemType:String) 
 	{
 		super(X, Y);
-		makeGraphic(16, 16, FlxColor.BLUE);
+		loadGraphic("assets/images/pickupSprite.png", true, 16, 16);
+		animation.add("idle", [0, 1, 0], 12);
+		animation.play("idle");
 		
 		_itemType = itemType;
 		

@@ -26,7 +26,7 @@ class PlayState extends FlxState
 	public var _player:Player;
 	
 	public var _grpNPCs:FlxTypedGroup<NPC>;
-	public var _grpPickupSpots:FlxGroup;
+	public var _grpPickupSpots:FlxTypedGroup<PickupSpot>;
 	public var _grpOOB:FlxGroup;
 	
 	public var _map:TiledLevel;
@@ -53,7 +53,7 @@ class PlayState extends FlxState
 	{
 		FlxG.log.add("playstate chaekced");
 		
-		_grpPickupSpots = new FlxGroup();
+		_grpPickupSpots = new FlxTypedGroup<PickupSpot>();
 		_grpOOB = new FlxGroup();
 		
 		_map = new TiledLevel("assets/data/walmartReal.tmx", this);
@@ -230,8 +230,7 @@ class PlayState extends FlxState
 			FlxG.switchState(new MenuState());
 		}
 		
-		
-		
+		_grpPickupSpots.forEachAlive(pickupItem, true);
 		
 		_anxietyText.text = "Anxiety: " + Math.floor(_player.anxiety);
 	}

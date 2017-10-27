@@ -221,12 +221,6 @@ class TiledLevel extends TiledMap
 		
 		switch (o.type.toLowerCase())
 		{
-			
-			case "player_start":
-				state._player = new Player(x, y);
-				group.add(state._player);
-				FlxG.log.add("Player object added");
-			
 			case "floor":
 				var floor = new FlxObject(x, y, o.width, o.height);
 				state.floor = floor;
@@ -238,6 +232,10 @@ class TiledLevel extends TiledMap
 			case "pickup":
 				var pickup = new PickupSpot(x, y, o.properties.get("itemType"));
 				state._grpPickupSpots.add(pickup);
+			case "player_start":
+				state._player = new Player(x, y);
+				group.add(state._player);
+				FlxG.log.add("Player object added");
 			/*	
 			case "coin":
 				var tileset = g.map.getGidOwner(o.gid);
