@@ -19,7 +19,7 @@ class MenuState extends FlxState
 		_playGame = new FlxButton(20, 300, "Begin", clickStart);
 		add(_playGame);
 		
-		_creds = new FlxText(20, 200, 0, "A game by ninjamuffin99 and aninvisiblepirate\nPA Voice by Saminat\nMade in 5 days", 10);
+		_creds = new FlxText(20, 200, 0, "A game by ninjamuffin99 and aninvisiblepirate\nPA Voice by Saminat\nMade in a week", 10);
 		add(_creds);
 		super.create();
 	}
