@@ -68,9 +68,9 @@ class PlayState extends FlxState
 		add(_map.foregroundTiles);
 		add(_map.BGObjects);
 		add(_map.foregroundObjects);
-		
-		add(_map.objectsLayer);
 		add(_grpPickupSpots);
+		add(_map.objectsLayer);
+		
 		add(_grpOOB);
 		FlxG.log.add("after layers Loded");
 		

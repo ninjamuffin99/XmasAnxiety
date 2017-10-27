@@ -160,7 +160,7 @@ class TiledLevel extends TiledMap
 			}
 			
 			//objects layer
-			if (layer.name == "objects")
+			if (layer.name == "objects" || layer.name == "pickups")
 			{
 				for (o in objectLayer.objects)
 				{
