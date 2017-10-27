@@ -66,7 +66,9 @@ class PlayState extends FlxState
 		add (_map.imagesLayer);
 		
 		add(_map.foregroundTiles);
+		add(_map.BGObjects);
 		add(_map.foregroundObjects);
+		
 		add(_map.objectsLayer);
 		add(_grpPickupSpots);
 		add(_grpOOB);
