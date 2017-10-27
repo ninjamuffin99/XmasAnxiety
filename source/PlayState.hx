@@ -100,7 +100,7 @@ class PlayState extends FlxState
 		FlxG.camera.fade(FlxColor.BLACK, 1, true);
 		//FlxG.worldBounds.set(0, 0, _map.width, _map.height);
 		
-		
+		FlxG.log.add(_map.collidableTileLayers);
 		
 		createHUD();
 		
