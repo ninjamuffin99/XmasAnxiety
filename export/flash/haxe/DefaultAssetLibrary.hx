@@ -107,6 +107,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -194,10 +198,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/tileset1.png", AssetType.IMAGE);
 		className.set ("assets/images/tileset1resized.png", __ASSET__assets_images_tileset1resized_png);
 		type.set ("assets/images/tileset1resized.png", AssetType.IMAGE);
+		className.set ("assets/images/titlebg.png", __ASSET__assets_images_titlebg_png);
+		type.set ("assets/images/titlebg.png", AssetType.IMAGE);
+		className.set ("assets/images/titletype.png", __ASSET__assets_images_titletype_png);
+		type.set ("assets/images/titletype.png", AssetType.IMAGE);
 		className.set ("assets/images/walkmc.png", __ASSET__assets_images_walkmc_png);
 		type.set ("assets/images/walkmc.png", AssetType.IMAGE);
 		className.set ("assets/images/walmartRef.png", __ASSET__assets_images_walmartref_png);
 		type.set ("assets/images/walmartRef.png", AssetType.IMAGE);
+		className.set ("assets/music/558953_Merry-Xmas-Erryone.mp3", __ASSET__assets_music_558953_merry_xmas_erryone_mp3);
+		type.set ("assets/music/558953_Merry-Xmas-Erryone.mp3", AssetType.MUSIC);
 		className.set ("assets/music/music-goes-here - Copy.txt", __ASSET__assets_music_music_goes_here___copy_txt);
 		type.set ("assets/music/music-goes-here - Copy.txt", AssetType.TEXT);
 		className.set ("assets/music/Wish BackgroundEdited.mp3", __ASSET__assets_music_wish_backgroundedited_mp3);
@@ -222,6 +232,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sounds/buttonHangUp.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/crowdAmbient.mp3", __ASSET__assets_sounds_crowdambient_mp3);
 		type.set ("assets/sounds/crowdAmbient.mp3", AssetType.MUSIC);
+		className.set ("assets/sounds/pickUpSound.wav", __ASSET__assets_sounds_pickupsound_wav);
+		type.set ("assets/sounds/pickUpSound.wav", AssetType.SOUND);
 		className.set ("assets/sounds/sounds-go-here.txt", __ASSET__assets_sounds_sounds_go_here_txt);
 		type.set ("assets/sounds/sounds-go-here.txt", AssetType.TEXT);
 		className.set ("flixel/sounds/beep.mp3", __ASSET__flixel_sounds_beep_mp3);
@@ -397,6 +409,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/titlebg.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/titletype.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/walkmc.png";
 		path.set (id, id);
 		
@@ -405,6 +425,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/music/558953_Merry-Xmas-Erryone.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
 		id = "assets/music/music-goes-here - Copy.txt";
 		path.set (id, id);
 		
@@ -453,6 +477,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/pickUpSound.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
 		id = "assets/sounds/sounds-go-here.txt";
 		path.set (id, id);
 		
@@ -616,11 +644,20 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/images/tileset1resized.png", __ASSET__assets_images_tileset1resized_png);
 		type.set ("assets/images/tileset1resized.png", AssetType.IMAGE);
 		
+		className.set ("assets/images/titlebg.png", __ASSET__assets_images_titlebg_png);
+		type.set ("assets/images/titlebg.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/titletype.png", __ASSET__assets_images_titletype_png);
+		type.set ("assets/images/titletype.png", AssetType.IMAGE);
+		
 		className.set ("assets/images/walkmc.png", __ASSET__assets_images_walkmc_png);
 		type.set ("assets/images/walkmc.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/walmartRef.png", __ASSET__assets_images_walmartref_png);
 		type.set ("assets/images/walmartRef.png", AssetType.IMAGE);
+		
+		className.set ("assets/music/558953_Merry-Xmas-Erryone.mp3", __ASSET__assets_music_558953_merry_xmas_erryone_mp3);
+		type.set ("assets/music/558953_Merry-Xmas-Erryone.mp3", AssetType.MUSIC);
 		
 		className.set ("assets/music/music-goes-here - Copy.txt", __ASSET__assets_music_music_goes_here___copy_txt);
 		type.set ("assets/music/music-goes-here - Copy.txt", AssetType.TEXT);
@@ -657,6 +694,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/sounds/crowdAmbient.mp3", __ASSET__assets_sounds_crowdambient_mp3);
 		type.set ("assets/sounds/crowdAmbient.mp3", AssetType.MUSIC);
+		
+		className.set ("assets/sounds/pickUpSound.wav", __ASSET__assets_sounds_pickupsound_wav);
+		type.set ("assets/sounds/pickUpSound.wav", AssetType.SOUND);
 		
 		className.set ("assets/sounds/sounds-go-here.txt", __ASSET__assets_sounds_sounds_go_here_txt);
 		type.set ("assets/sounds/sounds-go-here.txt", AssetType.TEXT);
@@ -1362,8 +1402,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_tiles_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tileset1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tileset1resized_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_titlebg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_titletype_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_walkmc_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_walmartref_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_music_558953_merry_xmas_erryone_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_music_music_goes_here___copy_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_music_wish_backgroundedited_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_attention1_mp3 extends flash.media.Sound { }
@@ -1376,6 +1419,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_attention8_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_buttonhangup_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_crowdambient_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_pickupsound_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_mp3 extends flash.media.Sound { }
@@ -1386,6 +1430,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
+
+
+
 
 
 
@@ -1495,8 +1543,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/images/tiles.png") #if display private #end class __ASSET__assets_images_tiles_png extends lime.graphics.Image {}
 @:image("assets/images/tileset1.png") #if display private #end class __ASSET__assets_images_tileset1_png extends lime.graphics.Image {}
 @:image("assets/images/tileset1resized.png") #if display private #end class __ASSET__assets_images_tileset1resized_png extends lime.graphics.Image {}
+@:image("assets/images/titlebg.png") #if display private #end class __ASSET__assets_images_titlebg_png extends lime.graphics.Image {}
+@:image("assets/images/titletype.png") #if display private #end class __ASSET__assets_images_titletype_png extends lime.graphics.Image {}
 @:image("assets/images/walkmc.png") #if display private #end class __ASSET__assets_images_walkmc_png extends lime.graphics.Image {}
 @:image("assets/images/walmartRef.png") #if display private #end class __ASSET__assets_images_walmartref_png extends lime.graphics.Image {}
+@:file("assets/music/558953_Merry-Xmas-Erryone.mp3") #if display private #end class __ASSET__assets_music_558953_merry_xmas_erryone_mp3 extends lime.utils.Bytes {}
 @:file("assets/music/music-goes-here - Copy.txt") #if display private #end class __ASSET__assets_music_music_goes_here___copy_txt extends lime.utils.Bytes {}
 @:file("assets/music/Wish BackgroundEdited.mp3") #if display private #end class __ASSET__assets_music_wish_backgroundedited_mp3 extends lime.utils.Bytes {}
 @:file("assets/sounds/attention1.mp3") #if display private #end class __ASSET__assets_sounds_attention1_mp3 extends lime.utils.Bytes {}
@@ -1509,6 +1560,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/sounds/attention8.mp3") #if display private #end class __ASSET__assets_sounds_attention8_mp3 extends lime.utils.Bytes {}
 @:file("assets/sounds/buttonHangUp.mp3") #if display private #end class __ASSET__assets_sounds_buttonhangup_mp3 extends lime.utils.Bytes {}
 @:file("assets/sounds/crowdAmbient.mp3") #if display private #end class __ASSET__assets_sounds_crowdambient_mp3 extends lime.utils.Bytes {}
+@:file("assets/sounds/pickUpSound.wav") #if display private #end class __ASSET__assets_sounds_pickupsound_wav extends lime.utils.Bytes {}
 @:file("assets/sounds/sounds-go-here.txt") #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends lime.utils.Bytes {}
 @:file("C:/HaxeToolkit/haxe/lib/flixel/4,3,0/assets/sounds/beep.mp3") #if display private #end class __ASSET__flixel_sounds_beep_mp3 extends lime.utils.Bytes {}
 @:file("C:/HaxeToolkit/haxe/lib/flixel/4,3,0/assets/sounds/flixel.mp3") #if display private #end class __ASSET__flixel_sounds_flixel_mp3 extends lime.utils.Bytes {}

@@ -4,23 +4,49 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.text.FlxText;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
 import flixel.ui.FlxButton;
 import flixel.math.FlxMath;
+import flixel.util.FlxColor;
 
 class MenuState extends FlxState
 {
+	private var _title:FlxSprite;
+	private var _titleType:FlxSprite;
+	
 	private var _playGame:FlxButton;
 	
 	private var _creds:FlxText;
 	
 	override public function create():Void
 	{
+		_title = new FlxSprite(0, 0);
+		_title.loadGraphic(AssetPaths.titlebg__png, false, 435, 280);
+		_title.setGraphicSize(FlxG.width, FlxG.height);
+		_title.updateHitbox();
+		_title.screenCenter();
+		add(_title);
 		
-		_playGame = new FlxButton(20, 300, "Begin", clickStart);
+		_titleType = new FlxSprite();
+		_titleType.loadGraphic(AssetPaths.titletype__png, false, 435, 280);
+		_titleType.setGraphicSize(FlxG.width, FlxG.height);
+		_titleType.screenCenter();
+		add(_titleType);
+		
+		FlxTween.tween(_titleType, {y: _titleType.y + 20}, 0.9, {type:FlxTween.PINGPONG, ease:FlxEase.quadInOut});
+		
+		
+		_playGame = new FlxButton(20, 400, "Begin", clickStart);
 		add(_playGame);
 		
-		_creds = new FlxText(20, 200, 0, "A game by ninjamuffin99 and aninvisiblepirate\nPA Voice by Saminat\nMade in a week", 10);
+		FlxG.sound.play("assets/music/558953_Merry-Xmas-Erryone.mp3", 0.7, true);
+		
+		_creds = new FlxText(115, 8, 0, "ninjamuffin99 \n   and \n      aninvisibleprirate presents...", 16);
+		_creds.color = 0xF662230;
 		add(_creds);
+		FlxTween.tween(_creds, {y: _creds.y + 6}, 0.45, {type:FlxTween.PINGPONG, ease:FlxEase.quadInOut});
+		
 		super.create();
 	}
 
@@ -31,6 +57,10 @@ class MenuState extends FlxState
 	
 	private function clickStart():Void
 	{
-		FlxG.switchState(new PlayState());
+		FlxG.camera.fade(FlxColor.BLACK, 0.6false, function()
+		{
+			FlxG.switchState(new Loading());
+		});
+		FlxG.sound.music.fadeOut();
 	}
 }

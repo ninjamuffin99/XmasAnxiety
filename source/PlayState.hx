@@ -186,6 +186,10 @@ class PlayState extends FlxState
 		_timerText = new FlxText(20, 60, 0, Std.string(_timer), 25);
 		add(_timerText);
 		_timerText.scrollFactor.x = _timerText.scrollFactor.y = 0;
+		
+		_timerText.color = FlxColor.BLACK;
+		_anxietyText.color = FlxColor.BLACK;
+		_listText.color = FlxColor.BLACK;
 	}
 
 	override public function update(elapsed:Float):Void
@@ -194,7 +198,6 @@ class PlayState extends FlxState
 		
 		_timer -= FlxG.elapsed;
 		_timerText.text = "0:" + Std.string(Math.floor(FlxMath.remapToRange(_timer, 0, 600, 0, 60)) + " mins until closing!");
-		FlxG.watch.addQuick("timer realdeal", _timer);
 		
 		if (FlxMath.inBounds(_timer, 110, 110.5) && !_playingPA)
 		{
@@ -287,6 +290,7 @@ class PlayState extends FlxState
 		if (FlxG.overlap(pickupSpot, _player) && FlxG.keys.justReleased.SPACE)
 		{
 			_list.remove(pickupSpot._itemType);
+			FlxG.sound.play("assets/sounds/pickUpSound.wav", 0.5);
 			pickupSpot.kill();
 			_listText.text = Std.string(_list);
 		}

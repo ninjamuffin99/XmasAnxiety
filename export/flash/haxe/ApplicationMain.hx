@@ -186,12 +186,24 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/titlebg.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/titletype.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/walkmc.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/walmartRef.png");
 		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/music/558953_Merry-Xmas-Erryone.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
 		urls.push ("assets/music/music-goes-here - Copy.txt");
@@ -240,6 +252,10 @@ class ApplicationMain {
 		
 		urls.push ("assets/sounds/crowdAmbient.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("assets/sounds/pickUpSound.wav");
+		types.push (lime.Assets.AssetType.SOUND);
 		
 		
 		urls.push ("assets/sounds/sounds-go-here.txt");
@@ -331,7 +347,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "165",
+			build: "200",
 			company: "ninjaMuffin",
 			file: "XmasAnxiety",
 			fps: 60,
