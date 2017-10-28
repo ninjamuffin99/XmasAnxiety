@@ -16,6 +16,7 @@ class MenuState extends FlxState
 	private var _titleType:FlxSprite;
 	
 	private var _playGame:FlxButton;
+	private var _btnCreds:FlxButton;
 	
 	private var _creds:FlxText;
 	
@@ -37,8 +38,11 @@ class MenuState extends FlxState
 		FlxTween.tween(_titleType, {y: _titleType.y + 20}, 0.9, {type:FlxTween.PINGPONG, ease:FlxEase.quadInOut});
 		
 		
-		_playGame = new FlxButton(20, 400, "Begin", clickStart);
+		_playGame = new FlxButton(20, 400, "Begin Shopping!", clickStart);
 		add(_playGame);
+		
+		_btnCreds = new FlxButton(100, 400, "Credits", clickCreds);
+		add(_btnCreds);
 		
 		FlxG.sound.play("assets/music/558953_Merry-Xmas-Erryone.mp3", 0.4, true);
 		
@@ -62,5 +66,10 @@ class MenuState extends FlxState
 			FlxG.switchState(new Loading());
 		});
 		FlxG.sound.music.fadeOut();
+	}
+	
+	private function clickCreds():Void
+	{
+		FlxG.switchState(new CreditsState());
 	}
 }
