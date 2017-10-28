@@ -176,7 +176,7 @@ class PlayState extends FlxState
 		_list = Reg.items;
 		FlxG.random.shuffle(_list);
 		
-		_listText = new FlxText(20, 350, 0, Std.string(_list), 20);
+		_listText = new FlxText(20, 350, 550, Std.string(_list), 20);
 		add(_listText);
 		
 		_anxietyText.scrollFactor.x = _anxietyText.scrollFactor.y = 0;

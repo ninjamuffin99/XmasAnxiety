@@ -14,7 +14,7 @@ class Loading extends FlxState
 	override public function create():Void 
 	{
 		var whatever:FlxText;
-		whatever = new FlxText(0, 0, 0, "You have one hour. \nBuy your family christmas presents. \nAvoid People", 30);
+		whatever = new FlxText(0, 0, 0, "You have one hour. \nBuy your family christmas presents. \nAvoid People", 24);
 		whatever.screenCenter();
 		add(whatever);
 		

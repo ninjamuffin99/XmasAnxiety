@@ -40,7 +40,7 @@ class MenuState extends FlxState
 		_playGame = new FlxButton(20, 400, "Begin", clickStart);
 		add(_playGame);
 		
-		FlxG.sound.play("assets/music/558953_Merry-Xmas-Erryone.mp3", 0.7, true);
+		FlxG.sound.play("assets/music/558953_Merry-Xmas-Erryone.mp3", 0.4, true);
 		
 		_creds = new FlxText(115, 8, 0, "ninjamuffin99 \n   and \n      aninvisibleprirate presents...", 16);
 		_creds.color = 0xF662230;
@@ -57,7 +57,7 @@ class MenuState extends FlxState
 	
 	private function clickStart():Void
 	{
-		FlxG.camera.fade(FlxColor.BLACK, 0.6false, function()
+		FlxG.camera.fade(FlxColor.BLACK, 0.6, false, function()
 		{
 			FlxG.switchState(new Loading());
 		});
