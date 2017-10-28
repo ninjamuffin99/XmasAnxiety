@@ -233,7 +233,7 @@ class PlayState extends FlxState
 		
 		if (_player.anxiety >= 99 || _timer <= 2)
 		{
-			FlxG.switchState(new MenuState());
+			FlxG.switchState(new DeadState());
 		}
 		
 		_grpPickupSpots.forEachAlive(pickupItem, true);
