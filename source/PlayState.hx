@@ -46,6 +46,8 @@ class PlayState extends FlxState
 	private var _music:FlxSound;
 	private var _playingPA:Bool = false;
 	
+	private var _doneShopping:Bool = false;
+	
 	//exit really but using Floor for convienience
 	public var floor:FlxObject;
 	
@@ -86,7 +88,7 @@ class PlayState extends FlxState
 		}
 		
 		
-	
+		
 		/*
 		var tmpMap:TiledObjectLayer = cast _map.getLayer("entities");
 		for (e in tmpMap.objects)
@@ -176,13 +178,13 @@ class PlayState extends FlxState
 		_list = Reg.items;
 		FlxG.random.shuffle(_list);
 		
-		_listText = new FlxText(20, 350, 550, Std.string(_list), 20);
+		_listText = new FlxText(20, 350, 550, "Shopping list: \n" + Std.string(_list), 20);
 		add(_listText);
 		
 		_anxietyText.scrollFactor.x = _anxietyText.scrollFactor.y = 0;
 		_listText.scrollFactor.x = _listText.scrollFactor.y = 0;
 		
-		_timer = 600;
+		_timer = 390;
 		_timerText = new FlxText(20, 60, 0, Std.string(_timer), 25);
 		add(_timerText);
 		_timerText.scrollFactor.x = _timerText.scrollFactor.y = 0;
@@ -197,7 +199,7 @@ class PlayState extends FlxState
 		super.update(elapsed);
 		
 		_timer -= FlxG.elapsed;
-		_timerText.text = "0:" + Std.string(Math.floor(FlxMath.remapToRange(_timer, 0, 600, 0, 60)) + " mins until closing!");
+		_timerText.text = "0:" + Std.string(Math.floor(FlxMath.remapToRange(_timer, 0, 390, 0, 60)) + " mins until closing!");
 		
 		if (FlxMath.inBounds(_timer, 110, 110.5) && !_playingPA)
 		{
@@ -217,7 +219,8 @@ class PlayState extends FlxState
 		}
 		
 		_map.collideWithLevel(_player);
-		_map.collideWithLevel(_grpNPCs);
+		//_map.collideWithLevel(_grpNPCs);
+		FlxG.collide(_grpNPCs, _map.foregroundObjects);
 		
 		controls();
 		
@@ -236,6 +239,13 @@ class PlayState extends FlxState
 		_grpPickupSpots.forEachAlive(pickupItem, true);
 		
 		_anxietyText.text = "Anxiety: " + Math.floor(_player.anxiety);
+		
+		
+		if (_list.length == 0)
+		{
+			_doneShopping = true;
+		}
+		FlxG.watch.addQuick("done hsoppong", _doneShopping);
 	}
 	
 	private function checkOOB(npc:NPC):Void
@@ -292,7 +302,7 @@ class PlayState extends FlxState
 			_list.remove(pickupSpot._itemType);
 			FlxG.sound.play("assets/sounds/pickUpSound.wav", 0.5);
 			pickupSpot.kill();
-			_listText.text = Std.string(_list);
+			_listText.text = "Shopping list: \n" + Std.string(_list);
 		}
 		
 	}

@@ -270,7 +270,7 @@ class TiledLevel extends TiledMap
 	{
 		if (collidableTileLayers == null)
 			return false;
-
+		
 		for (map in collidableTileLayers)
 		{
 			// IMPORTANT: Always collide the map with objects, not the other way around.
