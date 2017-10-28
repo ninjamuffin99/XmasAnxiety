@@ -51,7 +51,7 @@ class CreditsState extends FlxState
 		var _btnSource:FlxButton = new FlxButton(80, 342, "Source", function(){FlxG.openURL("https://github.com/ninjamuffin99/XmasAnxiety"); });
 		add(_btnSource);
 		
-		var _btnBack:FlxButton = new FlxButton(80, 342, "Source", function(){FlxG.switchState(new MenuState()); });
+		var _btnBack:FlxButton = new FlxButton(40, 370, "Back", function(){FlxG.switchState(new MenuState()); });
 		add(_btnBack);
 		
 		super.create();
