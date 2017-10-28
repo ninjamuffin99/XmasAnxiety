@@ -38,10 +38,10 @@ class MenuState extends FlxState
 		FlxTween.tween(_titleType, {y: _titleType.y + 20}, 0.9, {type:FlxTween.PINGPONG, ease:FlxEase.quadInOut});
 		
 		
-		_playGame = new FlxButton(20, 400, "Begin Shopping!", clickStart);
+		_playGame = new FlxButton(20, 400, "Start", clickStart);
 		add(_playGame);
 		
-		_btnCreds = new FlxButton(100, 400, "Credits", clickCreds);
+		_btnCreds = new FlxButton(105, 400, "Credits", clickCreds);
 		add(_btnCreds);
 		
 		FlxG.sound.play("assets/music/558953_Merry-Xmas-Erryone.mp3", 0.4, true);
