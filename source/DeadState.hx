@@ -14,7 +14,7 @@ class DeadState extends FlxState
 
 	override public function create():Void 
 	{
-		var _dedText:FlxText = new FlxText(0, 0, 0, "You had to leave the store due to stress\nYou left empty handed.\nYour family hates you now\nTRY AGAIN", 16);
+		var _dedText:FlxText = new FlxText(0, 0, 0, "You had to leave the store\nYou left empty handed.\nYour family hates you now\nTRY AGAIN", 16);
 		add(_dedText);
 		_dedText.screenCenter();
 		

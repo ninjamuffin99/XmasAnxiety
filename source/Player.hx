@@ -113,11 +113,12 @@ class Player extends FlxSprite
 						animation.play("d");
 				}
 			}
-			else
-			{
-				animation.stop();
-			}
 			
+			
+		}
+		else
+		{
+			animation.stop();
 		}
 	}
 	

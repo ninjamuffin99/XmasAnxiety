@@ -219,12 +219,6 @@ class PlayState extends FlxState
 			_playingPA = true;
 		}
 		
-		if (FlxG.keys.justPressed.J)
-		{
-			_playingPA = false;
-			_timer = 120;
-		}
-		
 		_map.collideWithLevel(_player);
 		//_map.collideWithLevel(_grpNPCs);
 		FlxG.collide(_grpNPCs, _map.foregroundObjects);
@@ -237,7 +231,7 @@ class PlayState extends FlxState
 		*/	
 		_player.anxiety -= 0.0365;
 		
-		if (_player.anxiety >= 99)
+		if (_player.anxiety >= 99 || _timer <= 2)
 		{
 			FlxG.switchState(new MenuState());
 		}
