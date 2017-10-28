@@ -28,28 +28,31 @@ class CreditsState extends FlxState
 		var _btnTwitter3:FlxButton = new FlxButton(145, 182, "Twitter", function(){FlxG.openURL("https://twitter.com/ngsaminat"); });
 		add(_btnTwitter3);
 		
-		var _btnOther1:FlxButton = new FlxButton(190 + 95, 62, "Newgrounds", function(){FlxG.openURL("https://ninjamuffin99.newgrounds.com/"); });
+		var _btnOther1:FlxButton = new FlxButton(190 + 95, 62, "Newgrounds", function(){FlxG.openURL("https://ninjamuffin99.newgrounds.com/follow"); });
 		add(_btnOther1);
 		
 		var _btnOther2:FlxButton = new FlxButton(215 + 95, 122, "Instagram", function(){FlxG.openURL("https://www.instagram.com/colleen.loges/"); });
 		add(_btnOther2);
 		
-		var _btnOther2NG:FlxButton = new FlxButton(215 + 95 + 95, 122, "Newgrounds", function(){FlxG.openURL("https://aninvisiblepirate.newgrounds.com/"); });
+		var _btnOther2NG:FlxButton = new FlxButton(215 + 95 + 95, 122, "Newgrounds", function(){FlxG.openURL("https://aninvisiblepirate.newgrounds.com/follow"); });
 		add(_btnOther2NG);
 		
-		var _btnOther3:FlxButton = new FlxButton(145 + 95, 182, "Newgrounds", function(){FlxG.openURL("https://saminat.newgrounds.com/"); });
+		var _btnOther3:FlxButton = new FlxButton(145 + 95, 182, "Newgrounds", function(){FlxG.openURL("https://saminat.newgrounds.com/follow"); });
 		add(_btnOther3);
 		
 		
 		
-		var _btnHF:FlxButton = new FlxButton(130, 262, "HaxeFlixel", function(){lxG.openURL("http://haxeflixel.com/"); });
+		var _btnHF:FlxButton = new FlxButton(80, 302, "HaxeFlixel", function(){FlxG.openURL("http://haxeflixel.com/"); });
 		add(_btnHF);
 		
-		var _btnTiled:FlxButton = new FlxButton(130 + 95, 262, "Tiled", function(){lxG.openURL("http://www.mapeditor.org/"); });
+		var _btnTiled:FlxButton = new FlxButton(80 + 95, 302, "Tiled", function(){FlxG.openURL("http://www.mapeditor.org/"); });
 		add(_btnTiled);
 		
-		var _btnSource:FlxButton = new FlxButton(130, 322, "HaxeFlixel", function(){lxG.openURL("https://github.com/ninjamuffin99/XmasAnxiety"); });
+		var _btnSource:FlxButton = new FlxButton(80, 342, "Source", function(){FlxG.openURL("https://github.com/ninjamuffin99/XmasAnxiety"); });
 		add(_btnSource);
+		
+		var _btnBack:FlxButton = new FlxButton(80, 342, "Source", function(){FlxG.switchState(new MenuState()); });
+		add(_btnBack);
 		
 		super.create();
 	}
@@ -58,7 +61,7 @@ class CreditsState extends FlxState
 	{
 		super.update(elapsed);
 		
-		if (FlxG.keys.justReleased.ANY || FlxG.mouse.justReleased)
+		if (FlxG.keys.justReleased.ANY)
 		{
 			FlxG.switchState(new MenuState());
 		}
