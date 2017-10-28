@@ -206,6 +206,14 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
+		urls.push ("assets/music/681737_LOVE-ME.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("assets/music/717685_Jingle-Bells-Iori-Licea-Co.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
 		urls.push ("assets/music/music-goes-here - Copy.txt");
 		types.push (lime.Assets.AssetType.TEXT);
 		
@@ -355,7 +363,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "246",
+			build: "257",
 			company: "ninjaMuffin",
 			file: "XmasAnxiety",
 			fps: 60,

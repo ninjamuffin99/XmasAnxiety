@@ -228,15 +228,14 @@ class PlayState extends FlxState
 		_map.collideWithLevel(_player);
 		//_map.collideWithLevel(_grpNPCs);
 		FlxG.collide(_grpNPCs, _map.foregroundObjects);
+		FlxG.collide(_grpNPCs, _map.foregroundTiles);
 		
-		controls();
 		
 		_grpNPCs.forEachAlive(checkNPCVision);
 		/*
 		_grpNPCs.forEachAlive(_mapLeaveCheck);
-		*/		
-	
-		_player.anxiety -= 0.04;
+		*/	
+		_player.anxiety -= 0.0365;
 		
 		if (_player.anxiety >= 99)
 		{
@@ -247,7 +246,6 @@ class PlayState extends FlxState
 		
 		_anxietyText.text = "Anxiety: " + Math.floor(_player.anxiety);
 		
-		
 		if (_list.length == 0)
 		{
 			_doneShopping = true;
@@ -255,6 +253,11 @@ class PlayState extends FlxState
 		FlxG.watch.addQuick("done hsoppong", _doneShopping);
 		
 		_heart.volume = FlxMath.remapToRange(_player.anxiety, 1, 100, 0, 1);
+		
+		if (_player.y >= 3160 && _doneShopping)
+		{
+			FlxG.camera.fade(FlxColor.BLACK, 2, false, function(){FlxG.switchState(new CreditsState()); });
+		}
 	}
 	
 	private function checkOOB(npc:NPC):Void
@@ -265,17 +268,6 @@ class PlayState extends FlxState
 		}
 	}
 	
-	private function controls():Void
-	{
-		if (FlxG.keys.pressed.UP)
-		{
-			FlxG.camera.zoom += 0.01;
-		}
-		if (FlxG.keys.pressed.DOWN)
-		{
-			FlxG.camera.zoom -= 0.01;
-		}
-	}
 	
 	private function checkNPCVision(npc:NPC):Void
 	{
