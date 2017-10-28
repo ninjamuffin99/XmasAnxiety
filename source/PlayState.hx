@@ -44,6 +44,7 @@ class PlayState extends FlxState
 	private var _timerText:FlxText;
 	
 	private var _music:FlxSound;
+	private var _heart:FlxSound;
 	private var _playingPA:Bool = false;
 	
 	private var _doneShopping:Bool = false;
@@ -113,6 +114,12 @@ class PlayState extends FlxState
 		_music.volume = 0.5;
 		add(_music);
 		_music.play();
+		
+		_heart = new FlxSound();
+		_heart.loadEmbedded(AssetPaths.heartBeatSFX__mp3, true);
+		_heart.volume = 0;
+		add(_heart);
+		_heart.play();
 		
 		FlxG.log.add("bottom of create");
 		
@@ -229,7 +236,7 @@ class PlayState extends FlxState
 		_grpNPCs.forEachAlive(_mapLeaveCheck);
 		*/		
 	
-		_player.anxiety -= 0.01;
+		_player.anxiety -= 0.04;
 		
 		if (_player.anxiety >= 99)
 		{
@@ -246,6 +253,8 @@ class PlayState extends FlxState
 			_doneShopping = true;
 		}
 		FlxG.watch.addQuick("done hsoppong", _doneShopping);
+		
+		_heart.volume = FlxMath.remapToRange(_player.anxiety, 1, 100, 0, 1);
 	}
 	
 	private function checkOOB(npc:NPC):Void
@@ -273,7 +282,7 @@ class PlayState extends FlxState
 		
 		if (_map.collidableTileLayers[2].ray(npc.getMidpoint(), _player.getMidpoint()) && FlxMath.isDistanceWithin(_player, npc, 115))
 		{
-			_player.anxiety += 0.1;
+			_player.anxiety += 0.087;
 		}
 		
 	}
@@ -303,6 +312,11 @@ class PlayState extends FlxState
 			FlxG.sound.play("assets/sounds/pickUpSound.wav", 0.5);
 			pickupSpot.kill();
 			_listText.text = "Shopping list: \n" + Std.string(_list);
+			
+			if (_list.length == 0)
+			{
+				_listText.text = "Leave the store!";
+			}
 		}
 		
 	}

@@ -258,6 +258,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
+		urls.push ("assets/sounds/heartBeatSFX.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
 		urls.push ("assets/sounds/pickUpSound.wav");
 		types.push (lime.Assets.AssetType.SOUND);
 		
@@ -351,7 +355,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "234",
+			build: "246",
 			company: "ninjaMuffin",
 			file: "XmasAnxiety",
 			fps: 60,

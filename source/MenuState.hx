@@ -46,7 +46,7 @@ class MenuState extends FlxState
 		
 		FlxG.sound.play("assets/music/558953_Merry-Xmas-Erryone.mp3", 0.4, true);
 		
-		_creds = new FlxText(115, 8, 0, "ninjamuffin99 \n   and \n      aninvisibleprirate presents...", 16);
+		_creds = new FlxText(115, 8, 0, "ninjamuffin99 \n   and \n      aninvisibleprirate present...", 16);
 		_creds.color = 0xF662230;
 		add(_creds);
 		FlxTween.tween(_creds, {y: _creds.y + 6}, 0.45, {type:FlxTween.PINGPONG, ease:FlxEase.quadInOut});
